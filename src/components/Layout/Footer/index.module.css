@@ -23,6 +23,8 @@
   border: "none";
   overflow: "hidden";
   margin-bottom: 20px;
+  width: 100%;
+  height: 35px;
 }
 
 .contact {
@@ -57,4 +59,19 @@
 
 .openingHours > li {
   margin-top: 15px;
+}
+
+@media (max-width: 850px) {
+  .footer {
+    grid-template-areas:
+      "connect"
+      "right"
+      "credits";
+    grid-gap: 0;
+  }
+
+  .right {
+    padding: 20px 30px;
+    margin: 40px 0 20px;
+  }
 }

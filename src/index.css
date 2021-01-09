@@ -18,4 +18,5 @@ body {
 
   font-family: Cairo, sans-serif;
   font-size: 14px;
+  min-width: 350px;
 }

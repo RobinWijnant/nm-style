@@ -9,8 +9,6 @@ const Footer = () => (
       <iframe
         className={styles.likeButton}
         src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FNm.Style.Welden%2F&width=300&layout=standard&action=like&size=small&share=false&height=35&appId"
-        width="320"
-        height="35"
         scrolling="no"
         frameBorder="0"
         allowFullScreen
