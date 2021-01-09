@@ -1,7 +1,7 @@
 import { PageProps } from "gatsby";
 import React from "react";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layout2";
 
 const StyleBuilder: React.FC<PageProps> = ({ location }) => (
   <Layout location={location}>
