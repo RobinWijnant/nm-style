@@ -1,47 +1,61 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-
-import LogoImage from '~/images/logo'
-import Nav from '~/components/layout/nav'
-import css from './header.module.css'
-
-export interface HeaderProps {
-  shouldShowBigHeader: boolean
-}
+import React from "react";
+import Button from "../../Button";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import logo from "../../../assets/logo.jpg";
+import styles from "./index.module.css";
 
 type QueryProps = {
   site: {
     siteMetadata: {
-      title: string
-    }
-  }
-}
+      navItems: {
+        title: string;
+        href: string;
+      }[];
+    };
+  };
+};
 
-const HEADER_QUERY = graphql`
+const navItemsQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
+        navItems {
+          title
+          href
+        }
       }
     }
   }
-`
+`;
 
-const Header = ({ shouldShowBigHeader }: HeaderProps) => {
-  const data = useStaticQuery<QueryProps>(HEADER_QUERY)
-  const { title } = data.site.siteMetadata
+const Header = () => {
+  const data = useStaticQuery<QueryProps>(navItemsQuery);
+  const navItems = data.site.siteMetadata.navItems;
 
   return (
-    <header className={css.bigHeader}>
-      <Nav />
-      {shouldShowBigHeader && (
-        <div className={css.logoImage}>
-          <LogoImage width='30vmin' />
-        </div>
-      )}
-      <h1 className={css.logoText}>{title}</h1>
-    </header>
-  )
-}
+    <header className={styles.header}>
+      <img className={styles.logo} src={logo} alt="NM-Style logo" />
 
-export default Header
+      <nav className={styles.right}>
+        <div className={styles.contact}>
+          <span className={styles.phone}>0470 00 00 00</span>
+          <Button to="/online-afspraak-maken">Online afspraak</Button>
+        </div>
+        <ul className={styles.nav}>
+          {navItems.map((item) => (
+            <Link
+              className={styles.navItem}
+              activeClassName={styles.active}
+              key={item.title}
+              to={item.href}
+            >
+              <li>{item.title}</li>
+            </Link>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

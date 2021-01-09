@@ -1,0 +1,60 @@
+.footer {
+  margin: 80px 0 30px;
+  display: grid;
+  grid-template-areas:
+    "connect right"
+    "credits right";
+  grid-gap: 0 30px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+}
+
+.connect {
+  grid-area: connect;
+}
+
+.connect .title {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.likeButton {
+  border: "none";
+  overflow: "hidden";
+  margin-bottom: 20px;
+}
+
+.contact {
+  display: block;
+  line-height: 2;
+  margin-bottom: 8px;
+}
+
+.credits {
+  grid-area: credits;
+  margin-top: 30px;
+  color: var(--color-neutral-6);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.credits > a {
+  color: var(--color-neutral-6);
+}
+
+.right {
+  grid-area: right;
+  padding: 40px 70px;
+  background-color: var(--color-neutral-3);
+}
+
+.right > .title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.openingHours > li {
+  margin-top: 15px;
+}

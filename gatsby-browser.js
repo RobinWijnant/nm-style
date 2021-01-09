@@ -5,6 +5,3 @@
  */
 
 // You can delete this file if you're not using it
-
-import '@openfonts/open-sans_latin-ext'
-import 'typeface-montserrat'

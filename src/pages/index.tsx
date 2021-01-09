@@ -1,22 +1,21 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '~/components/layout'
-import SEO from '~/components/seo'
-import ReadMe from '~/components/read-me'
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 
 export interface IndexPageProps {
-  location: Location
+  location: Location;
 }
 
 interface QueryProps extends IndexPageProps {
   data: {
     site: {
       siteMetadata: {
-        title: string
-      }
-    }
-  }
+        title: string;
+      };
+    };
+  };
 }
 
 export const pageQuery = graphql`
@@ -27,19 +26,15 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 const IndexPage = ({ data, location }: QueryProps) => {
-  const title: string = data.site.siteMetadata.title
-
   return (
     <Layout location={location}>
-      <SEO title='Home' />
-      <article>
-        <ReadMe title={title} />
-      </article>
+      <SEO title="Home" />
+      <article></article>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

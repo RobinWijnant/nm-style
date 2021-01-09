@@ -1,50 +1,50 @@
 module.exports = {
   pathPrefix: `/gatsby-typescript-starter-minimalist`,
   siteMetadata: {
-    title: `Gatsby Typescript Starter Minimalist`,
-    description: `A minimalist Gatsby Typescript starter`,
-    author: `DL Ford`,
+    title: `NM Style`,
+    description: `Het kapsalon in regio Oudenaarde (Welden) voor alle leden van het gezin`,
+    author: `Robin Wijnant`,
     navItems: [
-      {
-        title: `Home`,
-        url: `/`,
-        isRelative: true,
-      },
-      {
-        title: `Style Builder`,
-        url: `/style-builder`,
-        isRelative: true,
-      },
+      { title: "Home", href: "/" },
+      { title: "Nieuws", href: "/nieuws" },
+      { title: "Prijslijst", href: "/prijslijst" },
+      { title: "Producten", href: "/producten" },
+      { title: "Reviews", href: "/reviews" },
+      { title: "Over", href: "/over" },
+      { title: "Contact", href: "/contact" },
     ],
   },
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Typescript Starter`,
+        name: `NM Style`,
         /* eslint-disable @typescript-eslint/camelcase */
-        short_name: `Gatsby`,
+        short_name: `NM Style`,
         start_url: `/`,
-        background_color: `#000`,
+        background_color: `#fff`,
         theme_color: `#000`,
         /* eslint-enable @typescript-eslint/camelcase */
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/logo.jpg`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: `Cairo`,
+              variants: [`400`, `500`, `600`, `700`],
+            },
+          ],
+        },
+      },
+    },
   ],
-}
+};

@@ -1,0 +1,38 @@
+.button {
+  display: block;
+  padding: 10px 24px;
+  color: var(--color-neutral-1);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+
+  background-color: var(--color-neutral-9);
+  position: relative;
+}
+
+.text {
+  display: block;
+  padding: 10px 24px;
+  color: var(--color-neutral-1);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+
+  background: linear-gradient(
+    82.39deg,
+    var(--color-primary-4) 15.3%,
+    var(--color-primary-3) 67.66%
+  );
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.button:hover .text {
+  opacity: 1;
+  position: absolute;
+}

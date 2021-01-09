@@ -1,345 +1,336 @@
-import React from 'react'
+import { PageProps } from "gatsby";
+import React from "react";
 
-import Layout from '~/components/layout'
+import Layout from "../components/Layout";
 
-export interface StyleBuilderProps {
-  location: Location
-}
-
-const StyleBuilder = ({ location }: StyleBuilderProps) => (
+const StyleBuilder: React.FC<PageProps> = ({ location }) => (
   <Layout location={location}>
-    <section>
-      <article>
-        <h1>Article</h1>
+    <>
+      <section>
+        <article>
+          <h1>Article</h1>
+          <h1>Heading 1</h1>
+          <p>
+            <strong>This text is bold</strong> senectus et netus et malesuada
+            fames ac turpis <sub>sub</sub> egestas
+            <sup>sup</sup>. Vestibulum tortor quam, feugiat vitae, ultricies
+            eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+            semper. <em>this text is italic.</em> Mauris placerat eleifend leo.
+            Quisque sit <ins>this text is inserted</ins> est et sapien
+            ullamcorper pharetra.{" "}
+            <strong>
+              <em>this text is bold italic</em>
+            </strong>{" "}
+            erat wisi, condimentum sed,{" "}
+            <code>
+              {" "}
+              This is a Really Really Really Really Really Long Inline Code
+              Block
+            </code>{" "}
+            , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+            condimentum, eros ipsum rutrum orci,{" "}
+            <mark> this text is marked</mark> tempus lacus enim ac dui.{" "}
+            <a href="/#">this is a link</a> in turpis pulvinar facilisis. Ut
+            felis.{" "}
+          </p>
+          <h2>Heading 2 (Small p)</h2>
+          <p>
+            <small>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+              vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+              amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+              placerat eleifend leo.{" "}
+            </small>
+          </p>
+          <h3>Heading 3</h3>
+          <p>
+            {" "}
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.{" "}
+          </p>
+          <h4>Heading 4</h4>
+          <p>
+            {" "}
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.{" "}
+          </p>
+          <h5>Heading 5</h5>
+          <p>
+            {" "}
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.{" "}
+          </p>
+          <h6>Heading 6</h6>
+          <p>
+            {" "}
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.{" "}
+          </p>
+        </article>
+      </section>
+      <hr />
+      <section>
         <h1>Heading 1</h1>
         <p>
-          <strong>This text is bold</strong> senectus et netus et
-          malesuada fames ac turpis <sub>sub</sub> egestas
-          <sup>sup</sup>. Vestibulum tortor quam, feugiat vitae,
-          ultricies eget, tempor sit amet, ante. Donec eu libero sit
-          amet quam egestas semper. <em>this text is italic.</em>{' '}
-          Mauris placerat eleifend leo. Quisque sit{' '}
-          <ins>this text is inserted</ins> est et sapien ullamcorper
-          pharetra.{' '}
+          <strong>This text is bold</strong> senectus et netus et malesuada
+          fames ac turpis <sub>sub</sub> egestas<sup>sup</sup>. Vestibulum
+          tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+          Donec eu libero sit amet quam egestas semper.{" "}
+          <em>this text is italic.</em> Mauris placerat eleifend leo. Quisque
+          sit <ins>this text is inserted</ins> est et sapien ullamcorper
+          pharetra.{" "}
           <strong>
             <em>this text is bold italic</em>
-          </strong>{' '}
-          erat wisi, condimentum sed,{' '}
+          </strong>{" "}
+          erat wisi, condimentum sed,{" "}
           <code>
-            {' '}
-            This is a Really Really Really Really Really Long Inline
-            Code Block
-          </code>{' '}
-          , ornare sit amet, wisi. Aenean fermentum, elit eget
-          tincidunt condimentum, eros ipsum rutrum orci,{' '}
-          <mark> this text is marked</mark> tempus lacus enim ac dui.{' '}
-          <a href='/#'>this is a link</a> in turpis pulvinar
-          facilisis. Ut felis.{' '}
+            {" "}
+            This is a Really Really Really Really Really Long Inline Code Block
+          </code>{" "}
+          , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+          condimentum, eros ipsum rutrum orci, <mark>
+            {" "}
+            this text is marked
+          </mark>{" "}
+          tempus lacus enim ac dui. <a href="/#">this is a link</a> in turpis
+          pulvinar facilisis. Ut felis.{" "}
         </p>
         <h2>Heading 2 (Small p)</h2>
         <p>
           <small>
-            Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Vestibulum tortor quam,
-            feugiat vitae, ultricies eget, tempor sit amet, ante.
-            Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.{' '}
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.{" "}
           </small>
         </p>
         <h3>Heading 3</h3>
         <p>
-          {' '}
-          Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas. Vestibulum tortor quam,
-          feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-          eu libero sit amet quam egestas semper. Aenean ultricies mi
-          vitae est. Mauris placerat eleifend leo.{' '}
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
         </p>
         <h4>Heading 4</h4>
         <p>
-          {' '}
-          Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas. Vestibulum tortor quam,
-          feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-          eu libero sit amet quam egestas semper. Aenean ultricies mi
-          vitae est. Mauris placerat eleifend leo.{' '}
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
         </p>
         <h5>Heading 5</h5>
         <p>
-          {' '}
-          Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas. Vestibulum tortor quam,
-          feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-          eu libero sit amet quam egestas semper. Aenean ultricies mi
-          vitae est. Mauris placerat eleifend leo.{' '}
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
         </p>
         <h6>Heading 6</h6>
         <p>
-          {' '}
-          Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas. Vestibulum tortor quam,
-          feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-          eu libero sit amet quam egestas semper. Aenean ultricies mi
-          vitae est. Mauris placerat eleifend leo.{' '}
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
         </p>
-      </article>
-    </section>
-    <hr />
-    <section>
-      <h1>Heading 1</h1>
-      <p>
-        <strong>This text is bold</strong> senectus et netus et
-        malesuada fames ac turpis <sub>sub</sub> egestas<sup>sup</sup>
-        . Vestibulum tortor quam, feugiat vitae, ultricies eget,
-        tempor sit amet, ante. Donec eu libero sit amet quam egestas
-        semper. <em>this text is italic.</em> Mauris placerat eleifend
-        leo. Quisque sit <ins>this text is inserted</ins> est et
-        sapien ullamcorper pharetra.{' '}
-        <strong>
-          <em>this text is bold italic</em>
-        </strong>{' '}
-        erat wisi, condimentum sed,{' '}
-        <code>
-          {' '}
-          This is a Really Really Really Really Really Long Inline
-          Code Block
-        </code>{' '}
-        , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-        condimentum, eros ipsum rutrum orci,{' '}
-        <mark> this text is marked</mark> tempus lacus enim ac dui.{' '}
-        <a href='/#'>this is a link</a> in turpis pulvinar facilisis.
-        Ut felis.{' '}
-      </p>
-      <h2>Heading 2 (Small p)</h2>
-      <p>
-        <small>
-          Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas. Vestibulum tortor quam,
-          feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-          eu libero sit amet quam egestas semper. Aenean ultricies mi
-          vitae est. Mauris placerat eleifend leo.{' '}
-        </small>
-      </p>
-      <h3>Heading 3</h3>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h4>Heading 4</h4>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h5>Heading 5</h5>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h6>Heading 6</h6>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-    </section>
-    <hr />
-    <h1>Long Headings</h1>
-    <section>
-      <h1>
-        {' '}
-        This is a Really Really Really Really Really Long Header of
-        the Size 1{' '}
-      </h1>
-      <p>
-        <strong>This text is bold</strong> senectus et netus et
-        malesuada fames ac turpis <sub>sub</sub> egestas<sup>sup</sup>
-        . Vestibulum tortor quam, feugiat vitae, ultricies eget,
-        tempor sit amet, ante. Donec eu libero sit amet quam egestas
-        semper. <em>this text is italic.</em> Mauris placerat eleifend
-        leo. Quisque sit <ins>this text is inserted</ins> est et
-        sapien ullamcorper pharetra.{' '}
-        <strong>
-          <em>this text is bold italic</em>
-        </strong>{' '}
-        erat wisi, condimentum sed,{' '}
-        <code>
-          {' '}
-          This is a Really Really Really Really Really Long Inline
-          Code Block
-        </code>{' '}
-        , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-        condimentum, eros ipsum rutrum orci,{' '}
-        <mark>this text is marked</mark> tempus lacus enim ac dui.{' '}
-        <a href='/#'>this is a link</a> in turpis pulvinar facilisis.
-        Ut felis.{' '}
-      </p>
-      <h2>
-        {' '}
-        This is a Really Really Really Really Really Long Header of
-        the Size 2{' '}
-      </h2>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h3>
-        {' '}
-        This is a Really Really Really Really Really Long Header of
-        the Size 3{' '}
-      </h3>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h4>
-        {' '}
-        This is a Really Really Really Really Really Long Header of
-        the Size 4{' '}
-      </h4>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h5>
-        {' '}
-        This is a Really Really Really Really Really Long Header of
-        the Size 5{' '}
-      </h5>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h6>
-        {' '}
-        This is a Really Really Really Really Really Long Header of
-        the Size 6{' '}
-      </h6>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h1>Table</h1>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Age</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h1>BlockQuote</h1>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <blockquote>
+      </section>
+      <hr />
+      <h1>Long Headings</h1>
+      <section>
+        <h1>
+          {" "}
+          This is a Really Really Really Really Really Long Header of the Size 1{" "}
+        </h1>
         <p>
-          {' '}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vivamus magna. Cras in mi at felis aliquet congue. Ut a est
-          eget ligula molestie gravida. Curabitur massa. Donec
-          eleifend, libero at sagittis mollis, tellus est malesuada
-          tellus, at luctus turpis elit sit amet quam. Vivamus pretium
-          ornare est.{' '}
+          <strong>This text is bold</strong> senectus et netus et malesuada
+          fames ac turpis <sub>sub</sub> egestas<sup>sup</sup>. Vestibulum
+          tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+          Donec eu libero sit amet quam egestas semper.{" "}
+          <em>this text is italic.</em> Mauris placerat eleifend leo. Quisque
+          sit <ins>this text is inserted</ins> est et sapien ullamcorper
+          pharetra.{" "}
+          <strong>
+            <em>this text is bold italic</em>
+          </strong>{" "}
+          erat wisi, condimentum sed,{" "}
+          <code>
+            {" "}
+            This is a Really Really Really Really Really Long Inline Code Block
+          </code>{" "}
+          , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+          condimentum, eros ipsum rutrum orci, <mark>
+            this text is marked
+          </mark>{" "}
+          tempus lacus enim ac dui. <a href="/#">this is a link</a> in turpis
+          pulvinar facilisis. Ut felis.{" "}
         </p>
-      </blockquote>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h1>Code Block</h1>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <pre>
-        <code className='language-js'>
-          {`import React, { useState, createRef, useEffect } from "react"
+        <h2>
+          {" "}
+          This is a Really Really Really Really Really Long Header of the Size 2{" "}
+        </h2>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <h3>
+          {" "}
+          This is a Really Really Really Really Really Long Header of the Size 3{" "}
+        </h3>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <h4>
+          {" "}
+          This is a Really Really Really Really Really Long Header of the Size 4{" "}
+        </h4>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <h5>
+          {" "}
+          This is a Really Really Really Really Really Long Header of the Size 5{" "}
+        </h5>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <h6>
+          {" "}
+          This is a Really Really Really Really Really Long Header of the Size 6{" "}
+        </h6>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Table</h1>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>BlockQuote</h1>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <blockquote>
+          <p>
+            {" "}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            magna. Cras in mi at felis aliquet congue. Ut a est eget ligula
+            molestie gravida. Curabitur massa. Donec eleifend, libero at
+            sagittis mollis, tellus est malesuada tellus, at luctus turpis elit
+            sit amet quam. Vivamus pretium ornare est.{" "}
+          </p>
+        </blockquote>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Code Block</h1>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <pre>
+          <code className="language-js">
+            {`import React, { useState, createRef, useEffect } from "react"
 import styled from "styled-components"
 import { useInView } from "react-intersection-observer"
 
@@ -397,20 +388,20 @@ const Wrapper = styled.div\`
 \`
 
 export default SvgComponent`}
-        </code>
-      </pre>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <h1>Ligatures?</h1>
-      <pre>
-        <code className='language-text'>
-          {`.= ..= := =:= =!= __ == != === !== =/=
+          </code>
+        </pre>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <h1>Ligatures?</h1>
+        <pre>
+          <code className="language-text">
+            {`.= ..= := =:= =!= __ == != === !== =/=
 <-< <<- <-- <->
 <=< <<= <== <=>
 >>= >>- >- <~>
@@ -435,477 +426,449 @@ export default SvgComponent`}
 -| _|_ |- |= ||=
 #! #= #: ## ### ####
 #{ #[ #( #_ #_(`}
-        </code>
-      </pre>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h1>Ordered List</h1>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <ol>
-        <li>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        </li>
-        <li>Aliquam tincidunt mauris eu risus.</li>
-        <li>
-          {' '}
-          Vestibulum auctor dapibus neque.{' '}
-          <ol>
-            <li>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit.
-            </li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-            <li>
-              {' '}
-              Vestibulum auctor dapibus neque.{' '}
-              <ol>
-                <li>
-                  {' '}
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit.{' '}
-                </li>
-                <li>Aliquam tincidunt mauris eu risus.</li>
-                <li>
-                  {' '}
-                  Vestibulum auctor dapibus neque.{' '}
-                  <ol>
-                    <li>
-                      {' '}
-                      Lorem ipsum dolor sit amet, consectetuer
-                      adipiscing elit.{' '}
-                    </li>
-                    <li>Aliquam tincidunt mauris eu risus.</li>
-                    <li>
-                      {' '}
-                      Vestibulum auctor dapibus neque.{' '}
-                      <ol>
-                        <li>
-                          {' '}
-                          Lorem ipsum dolor sit amet, consectetuer
-                          adipiscing elit.{' '}
-                        </li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>Vestibulum auctor dapibus neque.</li>
-                      </ol>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
-            </li>
-          </ol>
-        </li>
-      </ol>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h1>Un-ordered List</h1>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <ul>
-        <li>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        </li>
-        <li>Aliquam tincidunt mauris eu risus.</li>
-        <li>
-          {' '}
-          Vestibulum auctor dapibus neque.{' '}
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit.
-            </li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-            <li>
-              {' '}
-              Vestibulum auctor dapibus neque.{' '}
-              <ul>
-                <li>
-                  {' '}
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit.{' '}
-                </li>
-                <li>Aliquam tincidunt mauris eu risus.</li>
-                <li>
-                  {' '}
-                  Vestibulum auctor dapibus neque.{' '}
-                  <ul>
-                    <li>
-                      {' '}
-                      Lorem ipsum dolor sit amet, consectetuer
-                      adipiscing elit.{' '}
-                    </li>
-                    <li>Aliquam tincidunt mauris eu risus.</li>
-                    <li>
-                      {' '}
-                      Vestibulum auctor dapibus neque.{' '}
-                      <ul>
-                        <li>
-                          {' '}
-                          Lorem ipsum dolor sit amet, consectetuer
-                          adipiscing elit.{' '}
-                        </li>
-                        <li>Aliquam tincidunt mauris eu risus.</li>
-                        <li>
-                          {' '}
-                          Vestibulum auctor dapibus neque.{' '}
-                          <ul>
-                            <li>
-                              {' '}
-                              Lorem ipsum dolor sit amet, consectetuer
-                              adipiscing elit.{' '}
-                            </li>
-                            <li>
-                              Aliquam tincidunt mauris eu risus.
-                            </li>
-                            <li>Vestibulum auctor dapibus neque.</li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <p>
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h1>Un-ordered List With Nested Paragraphs</h1>
-      <p>
-        {' '}
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.{' '}
-      </p>
-      <ul>
-        <li>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          <p>
-            Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Vestibulum tortor quam,
-            feugiat vitae, ultricies eget, tempor sit amet, ante.
-            Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.
-          </p>
-        </li>
-        <li>
-          Aliquam tincidunt mauris eu risus.{' '}
-          <p>
-            Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Vestibulum tortor quam,
-            feugiat vitae, ultricies eget, tempor sit amet, ante.
-            Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.
-          </p>
-        </li>
-        <li>
-          {' '}
-          Vestibulum auctor dapibus neque.{' '}
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit.{' '}
-              <p>
-                Pellentesque habitant morbi tristique senectus et
-                netus et malesuada fames ac turpis egestas. Vestibulum
-                tortor quam, feugiat vitae, ultricies eget, tempor sit
-                amet, ante. Donec eu libero sit amet quam egestas
-                semper. Aenean ultricies mi vitae est. Mauris placerat
-                eleifend leo.
-              </p>
-            </li>
-            <li>
-              Aliquam tincidunt mauris eu risus.{' '}
-              <p>
-                Pellentesque habitant morbi tristique senectus et
-                netus et malesuada fames ac turpis egestas. Vestibulum
-                tortor quam, feugiat vitae, ultricies eget, tempor sit
-                amet, ante. Donec eu libero sit amet quam egestas
-                semper. Aenean ultricies mi vitae est. Mauris placerat
-                eleifend leo.
-              </p>
-            </li>
-            <li>
-              {' '}
-              Vestibulum auctor dapibus neque.{' '}
-              <ul>
-                <li>
-                  {' '}
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit.{' '}
-                  <p>
-                    Pellentesque habitant morbi tristique senectus et
-                    netus et malesuada fames ac turpis egestas.
-                    Vestibulum tortor quam, feugiat vitae, ultricies
-                    eget, tempor sit amet, ante. Donec eu libero sit
-                    amet quam egestas semper. Aenean ultricies mi
-                    vitae est. Mauris placerat eleifend leo.
-                  </p>
-                </li>
-                <li>
-                  Aliquam tincidunt mauris eu risus.{' '}
-                  <p>
-                    Pellentesque habitant morbi tristique senectus et
-                    netus et malesuada fames ac turpis egestas.
-                    Vestibulum tortor quam, feugiat vitae, ultricies
-                    eget, tempor sit amet, ante. Donec eu libero sit
-                    amet quam egestas semper. Aenean ultricies mi
-                    vitae est. Mauris placerat eleifend leo.
-                  </p>
-                </li>
-                <li>
-                  {' '}
-                  Vestibulum auctor dapibus neque.{' '}
-                  <ul>
-                    <li>
-                      {' '}
-                      Lorem ipsum dolor sit amet, consectetuer
-                      adipiscing elit.{' '}
-                      <p>
-                        Pellentesque habitant morbi tristique senectus
-                        et netus et malesuada fames ac turpis egestas.
-                        Vestibulum tortor quam, feugiat vitae,
-                        ultricies eget, tempor sit amet, ante. Donec
-                        eu libero sit amet quam egestas semper. Aenean
-                        ultricies mi vitae est. Mauris placerat
-                        eleifend leo.
-                      </p>
-                    </li>
-                    <li>
-                      Aliquam tincidunt mauris eu risus.{' '}
-                      <p>
-                        Pellentesque habitant morbi tristique senectus
-                        et netus et malesuada fames ac turpis egestas.
-                        Vestibulum tortor quam, feugiat vitae,
-                        ultricies eget, tempor sit amet, ante. Donec
-                        eu libero sit amet quam egestas semper. Aenean
-                        ultricies mi vitae est. Mauris placerat
-                        eleifend leo.
-                      </p>
-                    </li>
-                    <li>
-                      {' '}
-                      Vestibulum auctor dapibus neque.{' '}
-                      <ul>
-                        <li>
-                          {' '}
-                          Lorem ipsum dolor sit amet, consectetuer
-                          adipiscing elit.{' '}
-                          <p>
-                            Pellentesque habitant morbi tristique
-                            senectus et netus et malesuada fames ac
-                            turpis egestas. Vestibulum tortor quam,
-                            feugiat vitae, ultricies eget, tempor sit
-                            amet, ante. Donec eu libero sit amet quam
-                            egestas semper. Aenean ultricies mi vitae
-                            est. Mauris placerat eleifend leo.
-                          </p>
-                        </li>
-                        <li>
-                          Aliquam tincidunt mauris eu risus.{' '}
-                          <p>
-                            Pellentesque habitant morbi tristique
-                            senectus et netus et malesuada fames ac
-                            turpis egestas. Vestibulum tortor quam,
-                            feugiat vitae, ultricies eget, tempor sit
-                            amet, ante. Donec eu libero sit amet quam
-                            egestas semper. Aenean ultricies mi vitae
-                            est. Mauris placerat eleifend leo.
-                          </p>
-                        </li>
-                        <li>
-                          {' '}
-                          Vestibulum auctor dapibus neque.{' '}
-                          <ul>
-                            <li>
-                              {' '}
-                              Lorem ipsum dolor sit amet, consectetuer
-                              adipiscing elit.{' '}
-                              <p>
-                                Pellentesque habitant morbi tristique
-                                senectus et netus et malesuada fames
-                                ac turpis egestas. Vestibulum tortor
-                                quam, feugiat vitae, ultricies eget,
-                                tempor sit amet, ante. Donec eu libero
-                                sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris
-                                placerat eleifend leo.
-                              </p>
-                            </li>
-                            <li>
-                              Aliquam tincidunt mauris eu risus.{' '}
-                              <p>
-                                Pellentesque habitant morbi tristique
-                                senectus et netus et malesuada fames
-                                ac turpis egestas. Vestibulum tortor
-                                quam, feugiat vitae, ultricies eget,
-                                tempor sit amet, ante. Donec eu libero
-                                sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris
-                                placerat eleifend leo.
-                              </p>
-                            </li>
-                            <li>
-                              Vestibulum auctor dapibus neque.{' '}
-                              <p>
-                                Pellentesque habitant morbi tristique
-                                senectus et netus et malesuada fames
-                                ac turpis egestas. Vestibulum tortor
-                                quam, feugiat vitae, ultricies eget,
-                                tempor sit amet, ante. Donec eu libero
-                                sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris
-                                placerat eleifend leo.
-                              </p>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <p>
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h1>Form</h1>
-      <p>
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.
-      </p>
-      <form action='#' method='post'>
-        <div>
-          <label htmlFor='name'>Text Input:</label>
-          <input
-            type='text'
-            name='name'
-            id='name'
-            defaultValue=''
-            tabIndex='1'
-          />
-        </div>
-        <div>
-          <label htmlFor='email'>Email Input:</label>
-          <input
-            type='email'
-            name='email'
-            id='email'
-            defaultValue=''
-            tabIndex='1'
-          />
-        </div>
-        <div>
-          <label htmlFor='password'>password Input:</label>
-          <input
-            type='password'
-            name='password'
-            id='password'
-            defaultValue=''
-            tabIndex='1'
-          />
-        </div>
-        <div>
-          <label htmlFor='radio-choice-1'>Choice 1</label>
-          <input
-            type='radio'
-            name='radio-choice-1'
-            id='radio-choice-1'
-            tabIndex='2'
-            defaultValue='choice-1'
-          />
-        </div>
-        <div>
-          <label htmlFor='radio-choice-2'>Choice 2</label>
-          <input
-            type='radio'
-            name='radio-choice-2'
-            id='radio-choice-2'
-            tabIndex={3}
-            defaultValue='choice-2'
-          />
-        </div>
-        <div>
-          <label htmlFor='select-choice'>
-            Select Dropdown Choice:
-          </label>
-          <select name='select-choice' id='select-choice'>
-            <option defaultValue='Choice 1'>Choice 1</option>
-            <option defaultValue='Choice 2'>Choice 2</option>
-            <option defaultValue='Choice 3'>Choice 3</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor='checkbox'>Checkbox:</label>
-          <input type='checkbox' name='checkbox' id='checkbox' />
-        </div>
-        <div>
-          <button type='submit'>Submit</button>
-        </div>
-      </form>
-      <p>
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Vestibulum tortor quam,
-        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-        libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.
-      </p>
-    </section>
+          </code>
+        </pre>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Ordered List</h1>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Aliquam tincidunt mauris eu risus.</li>
+          <li>
+            {" "}
+            Vestibulum auctor dapibus neque.{" "}
+            <ol>
+              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+              <li>Aliquam tincidunt mauris eu risus.</li>
+              <li>
+                {" "}
+                Vestibulum auctor dapibus neque.{" "}
+                <ol>
+                  <li>
+                    {" "}
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.{" "}
+                  </li>
+                  <li>Aliquam tincidunt mauris eu risus.</li>
+                  <li>
+                    {" "}
+                    Vestibulum auctor dapibus neque.{" "}
+                    <ol>
+                      <li>
+                        {" "}
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit.{" "}
+                      </li>
+                      <li>Aliquam tincidunt mauris eu risus.</li>
+                      <li>
+                        {" "}
+                        Vestibulum auctor dapibus neque.{" "}
+                        <ol>
+                          <li>
+                            {" "}
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit.{" "}
+                          </li>
+                          <li>Aliquam tincidunt mauris eu risus.</li>
+                          <li>Vestibulum auctor dapibus neque.</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Un-ordered List</h1>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Aliquam tincidunt mauris eu risus.</li>
+          <li>
+            {" "}
+            Vestibulum auctor dapibus neque.{" "}
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+              <li>Aliquam tincidunt mauris eu risus.</li>
+              <li>
+                {" "}
+                Vestibulum auctor dapibus neque.{" "}
+                <ul>
+                  <li>
+                    {" "}
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.{" "}
+                  </li>
+                  <li>Aliquam tincidunt mauris eu risus.</li>
+                  <li>
+                    {" "}
+                    Vestibulum auctor dapibus neque.{" "}
+                    <ul>
+                      <li>
+                        {" "}
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit.{" "}
+                      </li>
+                      <li>Aliquam tincidunt mauris eu risus.</li>
+                      <li>
+                        {" "}
+                        Vestibulum auctor dapibus neque.{" "}
+                        <ul>
+                          <li>
+                            {" "}
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit.{" "}
+                          </li>
+                          <li>Aliquam tincidunt mauris eu risus.</li>
+                          <li>
+                            {" "}
+                            Vestibulum auctor dapibus neque.{" "}
+                            <ul>
+                              <li>
+                                {" "}
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit.{" "}
+                              </li>
+                              <li>Aliquam tincidunt mauris eu risus.</li>
+                              <li>Vestibulum auctor dapibus neque.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Un-ordered List With Nested Paragraphs</h1>
+        <p>
+          {" "}
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.{" "}
+        </p>
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            <p>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+              vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+              amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+              placerat eleifend leo.
+            </p>
+          </li>
+          <li>
+            Aliquam tincidunt mauris eu risus.{" "}
+            <p>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+              vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+              amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+              placerat eleifend leo.
+            </p>
+          </li>
+          <li>
+            {" "}
+            Vestibulum auctor dapibus neque.{" "}
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.{" "}
+                <p>
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                  feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+                  libero sit amet quam egestas semper. Aenean ultricies mi vitae
+                  est. Mauris placerat eleifend leo.
+                </p>
+              </li>
+              <li>
+                Aliquam tincidunt mauris eu risus.{" "}
+                <p>
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                  feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+                  libero sit amet quam egestas semper. Aenean ultricies mi vitae
+                  est. Mauris placerat eleifend leo.
+                </p>
+              </li>
+              <li>
+                {" "}
+                Vestibulum auctor dapibus neque.{" "}
+                <ul>
+                  <li>
+                    {" "}
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.{" "}
+                    <p>
+                      Pellentesque habitant morbi tristique senectus et netus et
+                      malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                      feugiat vitae, ultricies eget, tempor sit amet, ante.
+                      Donec eu libero sit amet quam egestas semper. Aenean
+                      ultricies mi vitae est. Mauris placerat eleifend leo.
+                    </p>
+                  </li>
+                  <li>
+                    Aliquam tincidunt mauris eu risus.{" "}
+                    <p>
+                      Pellentesque habitant morbi tristique senectus et netus et
+                      malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                      feugiat vitae, ultricies eget, tempor sit amet, ante.
+                      Donec eu libero sit amet quam egestas semper. Aenean
+                      ultricies mi vitae est. Mauris placerat eleifend leo.
+                    </p>
+                  </li>
+                  <li>
+                    {" "}
+                    Vestibulum auctor dapibus neque.{" "}
+                    <ul>
+                      <li>
+                        {" "}
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit.{" "}
+                        <p>
+                          Pellentesque habitant morbi tristique senectus et
+                          netus et malesuada fames ac turpis egestas. Vestibulum
+                          tortor quam, feugiat vitae, ultricies eget, tempor sit
+                          amet, ante. Donec eu libero sit amet quam egestas
+                          semper. Aenean ultricies mi vitae est. Mauris placerat
+                          eleifend leo.
+                        </p>
+                      </li>
+                      <li>
+                        Aliquam tincidunt mauris eu risus.{" "}
+                        <p>
+                          Pellentesque habitant morbi tristique senectus et
+                          netus et malesuada fames ac turpis egestas. Vestibulum
+                          tortor quam, feugiat vitae, ultricies eget, tempor sit
+                          amet, ante. Donec eu libero sit amet quam egestas
+                          semper. Aenean ultricies mi vitae est. Mauris placerat
+                          eleifend leo.
+                        </p>
+                      </li>
+                      <li>
+                        {" "}
+                        Vestibulum auctor dapibus neque.{" "}
+                        <ul>
+                          <li>
+                            {" "}
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit.{" "}
+                            <p>
+                              Pellentesque habitant morbi tristique senectus et
+                              netus et malesuada fames ac turpis egestas.
+                              Vestibulum tortor quam, feugiat vitae, ultricies
+                              eget, tempor sit amet, ante. Donec eu libero sit
+                              amet quam egestas semper. Aenean ultricies mi
+                              vitae est. Mauris placerat eleifend leo.
+                            </p>
+                          </li>
+                          <li>
+                            Aliquam tincidunt mauris eu risus.{" "}
+                            <p>
+                              Pellentesque habitant morbi tristique senectus et
+                              netus et malesuada fames ac turpis egestas.
+                              Vestibulum tortor quam, feugiat vitae, ultricies
+                              eget, tempor sit amet, ante. Donec eu libero sit
+                              amet quam egestas semper. Aenean ultricies mi
+                              vitae est. Mauris placerat eleifend leo.
+                            </p>
+                          </li>
+                          <li>
+                            {" "}
+                            Vestibulum auctor dapibus neque.{" "}
+                            <ul>
+                              <li>
+                                {" "}
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit.{" "}
+                                <p>
+                                  Pellentesque habitant morbi tristique senectus
+                                  et netus et malesuada fames ac turpis egestas.
+                                  Vestibulum tortor quam, feugiat vitae,
+                                  ultricies eget, tempor sit amet, ante. Donec
+                                  eu libero sit amet quam egestas semper. Aenean
+                                  ultricies mi vitae est. Mauris placerat
+                                  eleifend leo.
+                                </p>
+                              </li>
+                              <li>
+                                Aliquam tincidunt mauris eu risus.{" "}
+                                <p>
+                                  Pellentesque habitant morbi tristique senectus
+                                  et netus et malesuada fames ac turpis egestas.
+                                  Vestibulum tortor quam, feugiat vitae,
+                                  ultricies eget, tempor sit amet, ante. Donec
+                                  eu libero sit amet quam egestas semper. Aenean
+                                  ultricies mi vitae est. Mauris placerat
+                                  eleifend leo.
+                                </p>
+                              </li>
+                              <li>
+                                Vestibulum auctor dapibus neque.{" "}
+                                <p>
+                                  Pellentesque habitant morbi tristique senectus
+                                  et netus et malesuada fames ac turpis egestas.
+                                  Vestibulum tortor quam, feugiat vitae,
+                                  ultricies eget, tempor sit amet, ante. Donec
+                                  eu libero sit amet quam egestas semper. Aenean
+                                  ultricies mi vitae est. Mauris placerat
+                                  eleifend leo.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h1>Form</h1>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.
+        </p>
+        <form action="#" method="post">
+          <div>
+            <label htmlFor="name">Text Input:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              defaultValue=""
+              tabIndex="1"
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email Input:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              defaultValue=""
+              tabIndex="1"
+            />
+          </div>
+          <div>
+            <label htmlFor="password">password Input:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              defaultValue=""
+              tabIndex="1"
+            />
+          </div>
+          <div>
+            <label htmlFor="radio-choice-1">Choice 1</label>
+            <input
+              type="radio"
+              name="radio-choice-1"
+              id="radio-choice-1"
+              tabIndex="2"
+              defaultValue="choice-1"
+            />
+          </div>
+          <div>
+            <label htmlFor="radio-choice-2">Choice 2</label>
+            <input
+              type="radio"
+              name="radio-choice-2"
+              id="radio-choice-2"
+              tabIndex={3}
+              defaultValue="choice-2"
+            />
+          </div>
+          <div>
+            <label htmlFor="select-choice">Select Dropdown Choice:</label>
+            <select name="select-choice" id="select-choice">
+              <option defaultValue="Choice 1">Choice 1</option>
+              <option defaultValue="Choice 2">Choice 2</option>
+              <option defaultValue="Choice 3">Choice 3</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="checkbox">Checkbox:</label>
+            <input type="checkbox" name="checkbox" id="checkbox" />
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.
+        </p>
+      </section>
+    </>
   </Layout>
-)
+);
 
-export default StyleBuilder
+export default StyleBuilder;

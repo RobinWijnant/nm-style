@@ -1,33 +1,33 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 interface MetaPropertyTag {
-  property: string
-  content: string
+  property: string;
+  content: string;
 }
 
 interface MetaNameTag {
-  name: string
-  content: string
+  name: string;
+  content: string;
 }
 
 export interface SEOProps {
-  title: string
-  description?: string
-  lang?: string
-  meta?: [MetaPropertyTag | MetaNameTag]
+  title: string;
+  description?: string;
+  lang?: string;
+  meta?: [MetaPropertyTag | MetaNameTag];
 }
 
 type QueryProps = {
   site: {
     siteMetadata: {
-      title: string
-      description: string
-      author: string
-    }
-  }
-}
+      title: string;
+      description: string;
+      author: string;
+    };
+  };
+};
 
 const SEO_QUERY = graphql`
   query {
@@ -39,13 +39,13 @@ const SEO_QUERY = graphql`
       }
     }
   }
-`
+`;
 
 const SEO = ({ description, lang, meta, title }: SEOProps) => {
-  const { site } = useStaticQuery<QueryProps>(SEO_QUERY)
+  const { site } = useStaticQuery<QueryProps>(SEO_QUERY);
 
-  const metaDescription = description || site.siteMetadata.description
-  const metaTags = meta || []
+  const metaDescription = description || site.siteMetadata.description;
+  const metaTags = meta || [];
 
   return (
     <Helmet
@@ -90,11 +90,11 @@ const SEO = ({ description, lang, meta, title }: SEOProps) => {
         ...metaTags,
       ]}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
 
 SEO.defaultProps = {
-  lang: 'en',
-}
+  lang: "en",
+};
