@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header2";
-import Footer from "./Footer2";
+import Header from "./Header";
+import Footer from "./Footer";
 import "../../reset.css";
 import "../../index.css";
 import styles from "./index.module.css";

@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Layout from "../components/Layout2";
-import SEO from "../components/seo2";
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 export interface IndexPageProps {
   location: Location;
