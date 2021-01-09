@@ -14,6 +14,7 @@ interface MetaNameTag {
 
 export interface SEOProps {
   title: string;
+  titleTemplate?: string;
   description?: string;
   lang?: string;
   meta?: [MetaPropertyTag | MetaNameTag];
@@ -41,7 +42,7 @@ const SEO_QUERY = graphql`
   }
 `;
 
-const SEO = ({ description, lang, meta, title }: SEOProps) => {
+const SEO = ({ description, lang, meta, title, titleTemplate }: SEOProps) => {
   const { site } = useStaticQuery<QueryProps>(SEO_QUERY);
 
   const metaDescription = description || site.siteMetadata.description;
@@ -53,7 +54,7 @@ const SEO = ({ description, lang, meta, title }: SEOProps) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={titleTemplate ?? `%s - ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,

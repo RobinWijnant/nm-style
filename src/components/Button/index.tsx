@@ -6,7 +6,7 @@ type Props = {
   to: string;
 };
 
-const Layout: React.FC<Props> = ({ children, to }) => (
+const Button: React.FC<Props> = ({ children, to }) => (
   <span className={styles.button}>
     {children}
     <Link to={to} className={styles.text}>
@@ -15,4 +15,4 @@ const Layout: React.FC<Props> = ({ children, to }) => (
   </span>
 );
 
-export default Layout;
+export default Button;
