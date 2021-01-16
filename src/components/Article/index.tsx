@@ -23,10 +23,9 @@ const Article: React.FC<Props> = ({
   <article className={className}>
     <div className={styles.left}>
       {Boolean(date) && <span className={styles.date}>{date}</span>}
-      <img
+      <div
         className={styles.cover}
-        src={image}
-        alt={`Article image for ${title}`}
+        style={{ backgroundImage: `url(${image})` }}
       />
       <h1>{title}</h1>
       <p className={styles.description}>{description}</p>

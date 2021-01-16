@@ -4,8 +4,10 @@ article {
 
 .cover {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
+  padding-top: 45%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .date {
@@ -41,4 +43,10 @@ h1 {
 .fbLink img {
   margin-left: 5px;
   height: 14px;
+}
+
+@media (max-width: 800px) {
+  .cover {
+    padding-top: 60%;
+  }
 }
