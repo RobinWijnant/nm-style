@@ -25,7 +25,7 @@ const Footer = () => (
     <p className={styles.credits}>
       Website door <a href="https://robinwijnant.me">Robin Wijnant</a>
       <br />
-      &copy; 2021 NM-Style. Alle rechten voorbehouden.
+      &copy; 2021 NM-Style. <a href="/admin">Beheer</a>
     </p>
 
     <div className={styles.right}>

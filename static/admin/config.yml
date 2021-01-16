@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: robinwijnant/nm-style
+
+locale: nl
+
+media_folder: content/assets
+public_folder: ../assets
+
+collections:
+  - name: blog
+    label: Nieuws
+    folder: content/blog
+    create: true
+    fields:
+      - { name: thumbnail, label: Foto, widget: image}
+      - { name: date, label: Datum, widget: date, format: DD-MM-YYYY }
+      - { name: title, label: Titel, widget: string }
+      - { name: description, label: Korte beschrijving, widget: text }
+      - { name: url, label: Link naar facebook, widget: string }

@@ -1,5 +1,5 @@
 .button {
-  display: block;
+  display: inline-flex;
   padding: 10px 24px;
   color: var(--color-neutral-1);
   text-decoration: none;

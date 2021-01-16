@@ -20,14 +20,16 @@ const ArticleCarousel: React.FC<Props> = ({ children }) => {
     const nextIndex =
       currentSlideIndex + 1 > amountOfSlides - 1 ? 0 : currentSlideIndex + 1;
     setCurrentSlideIndex(nextIndex);
-    setShouldRestartAnimation(true);
-    setTimeout(() => setShouldRestartAnimation(false), 0);
   };
 
   const handleNextClick = () => {
     const nextIndex =
       currentSlideIndex - 1 < 0 ? amountOfSlides - 1 : currentSlideIndex - 1;
     setCurrentSlideIndex(nextIndex);
+  };
+
+  const handleChange = (index: number) => {
+    setCurrentSlideIndex(index);
     setShouldRestartAnimation(true);
     setTimeout(() => setShouldRestartAnimation(false), 0);
   };
@@ -42,7 +44,7 @@ const ArticleCarousel: React.FC<Props> = ({ children }) => {
           showStatus={false}
           showArrows={false}
           selectedItem={currentSlideIndex}
-          onChange={setCurrentSlideIndex}
+          onChange={handleChange}
           autoPlay={isAutoPlayEnabled}
           stopOnHover={false}
           showThumbs={false}
@@ -66,7 +68,6 @@ const ArticleCarousel: React.FC<Props> = ({ children }) => {
               isAutoPlayEnabled
                 ? {
                     animation: shouldRestartAnimation ? "none" : undefined,
-                    animationDuration: `${animationDurationInMs / 1000}s`,
                   }
                 : { animationPlayState: "paused" }
             }

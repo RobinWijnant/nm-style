@@ -15,10 +15,19 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

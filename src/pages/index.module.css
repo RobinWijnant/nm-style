@@ -1,3 +1,45 @@
 .article {
   margin: 0;
 }
+
+.promote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 120px 0;
+}
+
+.promote img {
+  width: 40%;
+  height: auto;
+}
+
+.promote .text {
+  width: 60%;
+  margin-left: 50px;
+}
+
+.promote .text h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.promote .text p {
+  line-height: 2;
+  margin: 30px 0;
+}
+
+@media (max-width: 800px) {
+  .promote {
+    flex-direction: column;
+  }
+
+  .promote img,
+  .promote .text {
+    width: 100%;
+  }
+
+  .promote .text {
+    margin: 40px 0 0;
+  }
+}
