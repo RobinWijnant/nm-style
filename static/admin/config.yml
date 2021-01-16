@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: robinwijnant/nm-style
+  name: git-gateway
 
 locale: nl
 
@@ -8,6 +7,13 @@ media_folder: content/assets
 public_folder: ../assets
 
 collections:
+  - name: appointment
+    label: Home - Maak afspraak
+    folder: content/home
+    fields:
+      - { name: thumbnail, label: Foto, widget: image}
+      - { name: title, label: Titel, widget: string }
+      - { name: description, label: Beschrijving, widget: text }
   - name: blog
     label: Nieuws
     folder: content/blog

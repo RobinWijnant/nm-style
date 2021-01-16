@@ -25,7 +25,6 @@ const Article: React.FC<Props> = ({
   <article className={className}>
     <div className={styles.left}>
       {Boolean(date) && <span className={styles.date}>{date}</span>}
-      {console.log(image)}
       <Image fluid={image} className={styles.cover} />
       <h1>{title}</h1>
       <p className={styles.description}>{description}</p>
