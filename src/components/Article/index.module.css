@@ -4,10 +4,7 @@ article {
 
 .cover {
   width: 100%;
-  padding-top: 45%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 500px;
 }
 
 .date {

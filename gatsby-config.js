@@ -15,7 +15,13 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        htmlTitle: `NM Style - Beheer`,
+        htmlFavicon: `src/assets/logo.jpg`,
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,

@@ -65,7 +65,7 @@ const ArticleCarousel: React.FC<Props> = ({ children }) => {
           <div
             className={styles.fill}
             style={
-              isAutoPlayEnabled
+              isAutoPlayEnabled && amountOfSlides > 1
                 ? {
                     animation: shouldRestartAnimation ? "none" : undefined,
                   }

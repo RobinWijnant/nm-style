@@ -16,7 +16,7 @@
 .status {
   position: absolute;
   right: 0;
-  padding-top: 50%;
+  top: 540px;
   display: grid;
   grid-template-areas:
     "index bar"
