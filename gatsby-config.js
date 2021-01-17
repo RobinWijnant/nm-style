@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
         htmlTitle: `NM Style - Beheer`,
-        htmlFavicon: `src/assets/logo.jpg`,
+        htmlFavicon: `static/logo.jpg`,
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
@@ -46,7 +46,7 @@ module.exports = {
         theme_color: `#000`,
         /* eslint-enable @typescript-eslint/camelcase */
         display: `minimal-ui`,
-        icon: `src/assets/logo.jpg`, // This path is relative to the root of the site.
+        icon: `static/logo.jpg`, // This path is relative to the root of the site.
       },
     },
     {
