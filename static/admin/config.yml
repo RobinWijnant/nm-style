@@ -7,21 +7,24 @@ media_folder: content/assets
 public_folder: ../assets
 
 collections:
-  - name: home-appointment
-    label: Home - Maak afspraak
-    folder: content/home
-    fields:
-      - { name: "layout", widget: "hidden", default: "home-appointment"}
-      - { name: thumbnail, label: Foto, widget: image}
-      - { name: title, label: Titel, widget: string }
-      - { name: description, label: Beschrijving, widget: text }
+  - name: home
+    label: Home
+    files:
+      - name: appointment
+        label: Afspraak maken
+        file: content/home/appointment.md
+        fields:
+          - { name: "layout", widget: "hidden", default: "home-appointment"}
+          - { name: thumbnail, label: Foto, widget: image }
+          - { name: title, label: Titel, widget: string }
+          - { name: description, label: Beschrijving, widget: text }
   - name: blog
     label: Nieuws
     folder: content/blog
     create: true
     fields:
-      - { name: "layout", widget: "hidden", default: "article"}
-      - { name: thumbnail, label: Foto, widget: image}
+      - { name: layout, widget: hidden, default: article }
+      - { name: thumbnail, label: Foto, widget: image }
       - { name: date, label: Datum, widget: date, date_format: true }
       - { name: title, label: Titel, widget: string }
       - { name: description, label: Korte beschrijving, widget: text }
