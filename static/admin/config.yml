@@ -2,6 +2,8 @@ backend:
   name: git-gateway
 
 locale: nl
+display_url: https://nm-style.be
+logo_url: https://nm-style.be/logo.jpg
 
 media_folder: content/assets
 public_folder: ../assets

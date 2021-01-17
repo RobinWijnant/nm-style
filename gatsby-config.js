@@ -20,6 +20,7 @@ module.exports = {
       options: {
         htmlTitle: `NM Style - Beheer`,
         htmlFavicon: `src/assets/logo.jpg`,
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     `gatsby-plugin-typescript`,
