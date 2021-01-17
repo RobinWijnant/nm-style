@@ -1,6 +1,6 @@
 ---
 thumbnail: ../assets/124911239_3472055852914546_976261252343743816_o.jpg
-date: 04-11-2020
+date: 2020-04-11T22:00:00.000Z
 title: Kleurpakket voor thuisgebruik
 description: Wenst u in deze coronatijd toch uw eigen kleur bij te werken, doe
   dan via pb uw bestelling en ik bezorg u het nodige
