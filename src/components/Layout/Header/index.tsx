@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Button from "../../Button";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import logo from "../../../assets/logo.jpg";
 import styles from "./index.module.css";
 import clsx from "clsx";
 
@@ -44,7 +43,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={headerClassNames}>
-      <img className={styles.logo} src={logo} alt="NM-Style logo" />
+      <img className={styles.logo} src="/logo.jpg" alt="NM-Style logo" />
 
       <div className={styles.contact}>
         <span className={styles.phone}>0470 00 00 00</span>
