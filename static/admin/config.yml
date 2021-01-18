@@ -50,7 +50,7 @@ collections:
         label: Intro
         file: content/prices/intro.md
         fields:
-          - { name: layout, widget: hidden, default: prices-intro}
+          - { name: layout, widget: hidden, default: prices-intro }
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text, required: false }
           - { name: thumbnail, label: Foto, widget: image, required: false }

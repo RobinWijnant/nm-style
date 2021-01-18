@@ -28,6 +28,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
         pageName="Nieuws"
         title={pageIntro.title}
         description={pageIntro.description}
+        image={pageIntro.thumbnail?.childImageSharp.fluid}
       />
 
       <div className={styles.articles}>

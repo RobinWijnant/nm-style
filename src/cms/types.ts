@@ -42,7 +42,7 @@ export interface PageIntro extends CmsDocument {
 export interface ServiceCategory extends CmsDocument {
   layout: "service-category";
   title: string;
-  thumbnail?: {
+  thumbnail: {
     childImageSharp: {
       fluid: FluidObject;
     };
@@ -51,6 +51,6 @@ export interface ServiceCategory extends CmsDocument {
 }
 
 export interface Service {
-  title: string;
-  price: number;
+  name: string;
+  price: string;
 }
