@@ -15,4 +15,6 @@ categories:
     services:
       - name: Brushen
         price: € 10
+      - name: Brushen nr 2
+        price: € 12
 ---
