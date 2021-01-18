@@ -20,11 +20,11 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="Prijslijst" />
 
-      <PageIntro
+      {/* <PageIntro
         pageName="Prijslijst"
         title={pageIntro.title}
         description={pageIntro.description}
-      />
+      /> */}
 
       <div className={styles.serviceCategories}></div>
     </Layout>
