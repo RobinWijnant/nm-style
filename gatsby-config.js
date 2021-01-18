@@ -15,40 +15,8 @@ module.exports = {
     ],
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        htmlTitle: `NM Style - Beheer`,
-        htmlFavicon: `static/logo.jpg`,
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/content`,
-      },
-    },
-    `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `NM Style`,
-        /* eslint-disable @typescript-eslint/camelcase */
-        short_name: `NM Style`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#000`,
-        /* eslint-enable @typescript-eslint/camelcase */
-        display: `minimal-ui`,
-        icon: `static/logo.jpg`, // This path is relative to the root of the site.
-      },
-    },
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
@@ -60,6 +28,45 @@ module.exports = {
             },
           ],
         },
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        htmlTitle: `NM Style - Beheer`,
+        htmlFavicon: `src/assets/logo-square.png`,
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `NM Style`,
+        /* eslint-disable @typescript-eslint/camelcase */
+        short_name: `NM Style`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#000`,
+        /* eslint-enable @typescript-eslint/camelcase */
+        display: `minimal-ui`,
+        icon: `src/assets/logo-square.png`,
       },
     },
   ],

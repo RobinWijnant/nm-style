@@ -3,6 +3,7 @@ import Button from "../../Button";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import styles from "./index.module.css";
 import clsx from "clsx";
+import Image, { FixedObject } from "gatsby-image";
 
 type QueryProps = {
   site: {
@@ -11,6 +12,11 @@ type QueryProps = {
         title: string;
         href: string;
       }[];
+    };
+  };
+  file: {
+    childImageSharp: {
+      fixed: FixedObject;
     };
   };
 };
@@ -25,6 +31,16 @@ const navItemsQuery = graphql`
         }
       }
     }
+    file(
+      relativePath: { eq: "logo.png" }
+      sourceInstanceName: { eq: "assets" }
+    ) {
+      childImageSharp {
+        fixed(width: 150, height: 100) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
   }
 `;
 
@@ -32,6 +48,7 @@ const Header: React.FC = () => {
   const data = useStaticQuery<QueryProps>(navItemsQuery);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navItems = data.site.siteMetadata.navItems;
+  const logoFixedObject = data.file.childImageSharp.fixed;
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "initial";
@@ -43,7 +60,11 @@ const Header: React.FC = () => {
 
   return (
     <header className={headerClassNames}>
-      <img className={styles.logo} src="/logo.jpg" alt="NM-Style logo" />
+      <Image
+        className={styles.logo}
+        fixed={logoFixedObject}
+        alt="NM-Style logo"
+      />
 
       <div className={styles.contact}>
         <span className={styles.phone}>0470 00 00 00</span>

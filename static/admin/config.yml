@@ -3,26 +3,36 @@ backend:
 
 locale: nl
 display_url: https://nm-style.be
-logo_url: https://nm-style.be/logo.jpg
 
 media_folder: content/assets
 public_folder: ../assets
 
 collections:
-  - name: home
-    label: Home
+  - name: home-page
+    label: Home pagina
     files:
       - name: appointment
         label: Afspraak maken
         file: content/home/appointment.md
         fields:
-          - { name: "layout", widget: "hidden", default: "home-appointment"}
+          - { name: layout, widget: hidden, default: home-appointment}
           - { name: thumbnail, label: Foto, widget: image }
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text }
-  - name: blog
-    label: Nieuws
-    folder: content/blog
+  - name: blog-page
+    label: Nieuws pagina
+    files:
+      - name: intro
+        label: Intro
+        file: content/blog/intro.md
+        fields:
+          - { name: layout, widget: hidden, default: blog-intro}
+          - { name: title, label: Titel, widget: string }
+          - { name: description, label: Beschrijving, widget: text, required: false }
+          - { name: thumbnail, label: Foto, widget: image, required: false }
+  - name: articles
+    label: Artikels
+    folder: content/articles
     create: true
     fields:
       - { name: layout, widget: hidden, default: article }

@@ -1,8 +1,8 @@
 import React, { Children, ComponentProps, Fragment, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
-import previousIcon from "../../assets/previous-icon.svg";
-import nextIcon from "../../assets/next-icon.svg";
-import stopIcon from "../../assets/stop-icon.svg";
+import previousIcon from "../../assets/icons/previous-icon.svg";
+import nextIcon from "../../assets/icons/next-icon.svg";
+import stopIcon from "../../assets/icons/stop-icon.svg";
 import "./react-responsive-carousel.css";
 import styles from "./index.module.css";
 

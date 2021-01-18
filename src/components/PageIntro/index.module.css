@@ -1,0 +1,31 @@
+.intro {
+  margin: 80px 0 60px;
+  display: flex;
+}
+
+.pageName {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.image {
+  max-width: 520px;
+  max-height: 350px;
+}
+
+@media (max-width: 800px) {
+  .image {
+    height: 300px;
+  }
+}
