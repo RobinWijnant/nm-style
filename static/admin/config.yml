@@ -19,6 +19,7 @@ collections:
           - { name: thumbnail, label: Foto, widget: image }
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text }
+
   - name: blog-page
     label: Nieuws pagina
     files:
@@ -41,3 +42,37 @@ collections:
       - { name: title, label: Titel, widget: string }
       - { name: description, label: Korte beschrijving, widget: text }
       - { name: facebookUrl, label: Link naar facebook, widget: string }
+
+  - name: prices-page
+    label: Prijslijst pagina
+    files:
+      - name: intro
+        label: Intro
+        file: content/prices/intro.md
+        fields:
+          - { name: layout, widget: hidden, default: prices-intro}
+          - { name: title, label: Titel, widget: string }
+          - { name: description, label: Beschrijving, widget: text, required: false }
+          - { name: thumbnail, label: Foto, widget: image, required: false }
+      - name: service-categories
+        label: Prijslijst
+        file: content/prices/services.md
+        fields:
+          - name: services
+            label: Diensten
+            widget: list
+            summary: '{{fields.title}}'
+            label_singular: categorie
+            fields:
+              - { name: layout, widget: hidden, default: prices-categories}
+              - { name: title, label: Titel, widget: string }
+              - { name: thumbnail, label: Foto, widget: image }
+              - name: services
+                label: Diensten
+                widget: list
+                collapsed: true
+                summary: '{{fields.name}} - {{fields.price}}'
+                label_singular: dienst
+                fields:
+                  - { name: name, label: Titel, widget: string }
+                  - { name: price, label: Titel, widget: string, required: false }

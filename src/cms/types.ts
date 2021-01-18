@@ -38,3 +38,19 @@ export interface PageIntro extends CmsDocument {
     };
   };
 }
+
+export interface ServiceCategory extends CmsDocument {
+  layout: "service-category";
+  title: string;
+  thumbnail?: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+  services: Service[];
+}
+
+export interface Service {
+  title: string;
+  price: number;
+}
