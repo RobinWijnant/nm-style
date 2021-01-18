@@ -58,13 +58,13 @@ collections:
         label: Prijslijst
         file: content/prices/services.md
         fields:
-          - name: services
-            label: Diensten
+          - { name: layout, widget: hidden, default: prices-categories}
+          - name: categories
+            label: Categorieën
             widget: list
             summary: '{{fields.title}}'
             label_singular: categorie
             fields:
-              - { name: layout, widget: hidden, default: prices-categories}
               - { name: title, label: Titel, widget: string }
               - { name: thumbnail, label: Foto, widget: image }
               - name: services
@@ -75,4 +75,4 @@ collections:
                 label_singular: dienst
                 fields:
                   - { name: name, label: Titel, widget: string }
-                  - { name: price, label: Titel, widget: string, required: false }
+                  - { name: price, label: Prijs, widget: string, required: false }

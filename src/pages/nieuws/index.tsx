@@ -19,7 +19,6 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const [pageIntro] = cmsDocuments.filter(
     (doc) => doc.layout === "blog-intro",
   ) as PageIntroType[];
-  console.log(articles);
 
   return (
     <Layout location={location}>
