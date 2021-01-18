@@ -4,8 +4,9 @@
 }
 
 .date {
-  margin-top: 20px;
+  margin: 30px 0 -20px;
   display: block;
+  letter-spacing: 0.3px;
 }
 
 h1 {

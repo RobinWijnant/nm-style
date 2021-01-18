@@ -3,6 +3,7 @@ import Image from "gatsby-image";
 import styles from "./index.module.css";
 import fbIcon from "../../assets/icons/fb-icon.png";
 import { FluidObject } from "gatsby-image";
+import { formatDate } from "../../utils/date";
 
 type Props = {
   title: string;
@@ -26,12 +27,14 @@ const Article: React.FC<Props> = ({
 }) => (
   <article className={className}>
     <div className={styles.left}>
-      {Boolean(date) && <span className={styles.date}>{date}</span>}
       <Image
         fluid={image}
         className={styles.cover}
         style={{ height: `${imageHeight}px` }}
       />
+      {Boolean(date) && (
+        <span className={styles.date}>{formatDate(date as Date)}</span>
+      )}
       <h1>{title}</h1>
       <p className={styles.description}>{description}</p>
       <a href={url} className={styles.fbLink}>

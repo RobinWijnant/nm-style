@@ -39,6 +39,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
             image={article.thumbnail.childImageSharp.fluid}
             title={article.title}
             description={article.description}
+            date={new Date(article.date)}
             url={article.facebookUrl}
           />
         ))}
