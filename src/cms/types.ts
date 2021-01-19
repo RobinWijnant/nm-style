@@ -54,3 +54,31 @@ export interface Service {
   name: string;
   price: string;
 }
+
+export interface Banner {
+  layout: "products-banner";
+  title: string;
+  description?: string;
+  thumbnail: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+}
+
+export interface ProductPageSection {
+  layout: "products-block1";
+  title: string;
+  description: string;
+}
+
+export interface ProductPageSectionWithImage {
+  layout: "products-block2" | "products-block3";
+  title: string;
+  description: string;
+  thumbnail: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+}

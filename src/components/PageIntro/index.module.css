@@ -39,6 +39,10 @@
     margin: 0;
   }
 
+  .title {
+    font-size: 35px;
+  }
+
   .image {
     height: 300px;
     max-width: 100%;

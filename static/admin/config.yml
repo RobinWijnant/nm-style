@@ -102,29 +102,20 @@ collections:
         fields:
           - { name: layout, label: Layout, widget: hidden, default: products-block1 }
           - { name: title, label: Titel, widget: string }
-          - name: paragraphs
-            label: Alineas
-            widget: list
-            field: { name: paragraph, label: Alinea, widget: text }
+          - { name: paragraphs, label: Alineas, widget: text }
       - name: block2
         label: Blok met foto rechts
         file: content/products/block2.md
         fields:
           - { name: layout, label: Layout, widget: hidden, default: products-block2 }
           - { name: title, label: Titel, widget: string }
-          - name: paragraphs
-            label: Alineas
-            widget: list
-            field: { name: paragraph, label: Alinea, widget: text }
-          - { name: thumbnail, label: Foto, widget: image, default: [] }
+          - { name: paragraphs, label: Beschrijving, widget: text }
+          - { name: thumbnail, label: Foto, widget: image }
       - name: block3
         label: Blok met foto links
         file: content/products/block3.md
         fields:
           - { name: layout, label: Layout, widget: hidden, default: products-block3 }
           - { name: title, label: Titel, widget: string }
-          - name: paragraphs
-            label: Alineas
-            widget: list
-            field: { name: paragraph, label: Alinea, widget: text }
-          - { name: thumbnail, label: Foto, widget: image, default: [] }
+          - { name: paragraphs, label: Beschrijving, widget: text }
+          - { name: thumbnail, label: Foto, widget: image }
