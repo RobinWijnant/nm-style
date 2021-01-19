@@ -23,7 +23,7 @@ collections:
         label: Afspraak maken
         file: content/home/appointment.md
         fields:
-          - { name: layout, label: Layout, widget: hidden, default: home-appointment}
+          - { name: layout, label: Layout, widget: hidden, default: home-appointment }
           - { name: thumbnail, label: Foto, widget: image }
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text }
@@ -35,7 +35,7 @@ collections:
         label: Intro
         file: content/blog/intro.md
         fields:
-          - { name: layout, label: Layout, widget: hidden, default: blog-intro}
+          - { name: layout, label: Layout, widget: hidden, default: blog-intro }
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text, required: false }
           - { name: thumbnail, label: Foto, widget: image, required: false }
@@ -62,11 +62,11 @@ collections:
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text, required: false }
           - { name: thumbnail, label: Foto, widget: image, required: false }
-      - name: service-categories
+      - name: categories-list
         label: Prijslijst
         file: content/prices/services.md
         fields:
-          - { name: layout, label: Layout, widget: hidden, default: prices-categories}
+          - { name: layout, label: Layout, widget: hidden, default: prices-categories }
           - name: categories
             label: Categorieën
             widget: list
@@ -126,3 +126,43 @@ collections:
           - { name: title, label: Titel, widget: string }
           - { name: paragraphs, label: Beschrijving, widget: text }
           - { name: thumbnail, label: Foto, widget: image }
+
+  - name: reviews-page
+    label: Reviewspagina
+    files:
+      - name: intro
+        label: Intro
+        file: content/reviews/intro.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: reviews-intro }
+          - { name: title, label: Titel, widget: string }
+          - { name: description, label: Beschrijving, widget: text, required: false }
+          - { name: thumbnail, label: Foto, widget: image, required: false }
+      - name: reviews-list
+        label: Reviews
+        file: content/reviews/reviews.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: reviews-reviews }
+          - name: reviews
+            label: Reviews
+            widget: list
+            collapsed: true
+            summary: '{{fields.title}}'
+            label_singular: review
+            fields:
+              - name: images
+                label: Foto's
+                widget: list
+                collapsed: true
+                label_singular: foto
+                fields:
+                  - { name: thumbnail, label: Foto, widget: image }
+              - { name: title, label: Titel, widget: string }
+              - { name: description, label: Beschrijving, widget: text }
+      - name: cta
+        label: Online afspraak banner
+        file: content/reviews/cta.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: reviews-cta }
+          - { name: title, label: Titel, widget: string }
+          - { name: description, label: Beschrijving, widget: text }
