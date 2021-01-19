@@ -105,7 +105,7 @@ collections:
           - name: paragraphs
             label: Alineas
             widget: list
-            field: { name: paragraph, label: Alinea, widget: string }
+            field: { name: paragraph, label: Alinea, widget: text }
       - name: block2
         label: Blok met foto rechts
         file: content/products/block2.md
@@ -115,7 +115,7 @@ collections:
           - name: paragraphs
             label: Alineas
             widget: list
-            field: { name: paragraph, label: Alinea, widget: string }
+            field: { name: paragraph, label: Alinea, widget: text }
           - { name: thumbnail, label: Foto, widget: image, default: [] }
       - name: block3
         label: Blok met foto links
@@ -126,5 +126,5 @@ collections:
           - name: paragraphs
             label: Alineas
             widget: list
-            field: { name: paragraph, label: Alinea, widget: string }
+            field: { name: paragraph, label: Alinea, widget: text }
           - { name: thumbnail, label: Foto, widget: image, default: [] }
