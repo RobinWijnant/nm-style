@@ -9,6 +9,7 @@ import { graphql, PageProps } from "gatsby";
 import { Article as ArticleType, AppointmentInfo } from "../cms/types";
 import Image from "gatsby-image";
 import { getCmsDocuments } from "../cms";
+import Wrapper from "../components/Wrapper";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -25,31 +26,33 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
         title="Kapsalon in Welden (Oudenaarde)"
         titleTemplate={`NM Style - %s`}
       />
-      <ArticleCarousel>
-        {articles.map((article) => (
-          <Article
-            key={`${article.date}-${article.title}`}
-            className={styles.article}
-            image={article.thumbnail.childImageSharp.fluid}
-            title={article.title}
-            description={article.description}
-            url={article.facebookUrl}
-            imageHeight={500}
+      <Wrapper>
+        <ArticleCarousel>
+          {articles.map((article) => (
+            <Article
+              key={`${article.date}-${article.title}`}
+              className={styles.article}
+              image={article.thumbnail.childImageSharp.fluid}
+              title={article.title}
+              description={article.description}
+              url={article.facebookUrl}
+              imageHeight={500}
+            />
+          ))}
+        </ArticleCarousel>
+        <div className={styles.promote}>
+          <Image
+            className={styles.promoteImage}
+            fluid={appointment.thumbnail.childImageSharp.fluid}
+            alt="Afspraak maken teaser"
           />
-        ))}
-      </ArticleCarousel>
-      <div className={styles.promote}>
-        <Image
-          className={styles.promoteImage}
-          fluid={appointment.thumbnail.childImageSharp.fluid}
-          alt="Afspraak maken teaser"
-        />
-        <div className={styles.text}>
-          <h2>{appointment.title}</h2>
-          <p>{appointment.description}</p>
-          <Button to="/online-afspraak-maken">Online afspraak</Button>
+          <div className={styles.text}>
+            <h2>{appointment.title}</h2>
+            <p>{appointment.description}</p>
+            <Button to="/online-afspraak-maken">Online afspraak</Button>
+          </div>
         </div>
-      </div>
+      </Wrapper>
     </Layout>
   );
 };

@@ -3,18 +3,22 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "../../reset.css";
 import "../../index.css";
-import styles from "./index.module.css";
+import Wrapper from "../../components/Wrapper";
 
 type Props = {
   location: Location;
 };
 
 const Layout: React.FC<Props> = ({ children }) => (
-  <div className={styles.wrapper}>
-    <Header />
+  <>
+    <Wrapper>
+      <Header />
+    </Wrapper>
     <main>{children}</main>
-    <Footer />
-  </div>
+    <Wrapper>
+      <Footer />
+    </Wrapper>
+  </>
 );
 
 export default Layout;

@@ -12,6 +12,8 @@ import { getCmsDocuments } from "../../cms";
 import Image from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
 import TextBlock from "../../components/TextBlock";
+import Wrapper from "../../components/Wrapper";
+import clsx from "clsx";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -44,32 +46,43 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
         </div>
       </BackgroundImage>
 
-      <div className={styles.section}>
-        <h3 className={styles.title}>{section1.title}</h3>
-        <TextBlock paragraphs={section1.description} />
-      </div>
-
-      <div className={styles.textBlockWithImage}>
-        <Image
-          fluid={section2.thumbnail.childImageSharp.fluid}
-          className={styles.image}
-        />
-        <div className={styles.text}>
-          <h3 className={styles.title}>{section2.title}</h3>
-          <TextBlock paragraphs={section2.description} />
+      <Wrapper>
+        <div className={styles.section}>
+          <h3 className={styles.title}>{section1.title}</h3>
+          <TextBlock
+            paragraphs={section1.description}
+            className={styles.description}
+          />
         </div>
-      </div>
 
-      <div className={styles.textBlockWithImage}>
-        <Image
-          fluid={section3.thumbnail.childImageSharp.fluid}
-          className={styles.image}
-        />
-        <div className={styles.text}>
-          <h3 className={styles.title}>{section3.title}</h3>
-          <TextBlock paragraphs={section3.description} />
+        <div className={clsx(styles.section, styles.sectionWithImage)}>
+          <Image
+            fluid={section2.thumbnail.childImageSharp.fluid}
+            className={styles.image}
+          />
+          <div className={styles.text}>
+            <h3 className={styles.title}>{section2.title}</h3>
+            <TextBlock
+              paragraphs={section2.description}
+              className={styles.description}
+            />
+          </div>
         </div>
-      </div>
+
+        <div className={clsx(styles.section, styles.sectionWithImage)}>
+          <Image
+            fluid={section3.thumbnail.childImageSharp.fluid}
+            className={styles.image}
+          />
+          <div className={styles.text}>
+            <h3 className={styles.title}>{section3.title}</h3>
+            <TextBlock
+              paragraphs={section3.description}
+              className={styles.description}
+            />
+          </div>
+        </div>
+      </Wrapper>
     </Layout>
   );
 };

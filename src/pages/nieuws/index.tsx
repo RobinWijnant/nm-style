@@ -10,6 +10,7 @@ import Layout from "../../components/Layout";
 import SEO from "../../components/Seo";
 import styles from "./index.module.css";
 import { getCmsDocuments } from "../../cms";
+import Wrapper from "../../components/Wrapper";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -24,26 +25,28 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="Nieuws" />
 
-      <PageIntro
-        pageName="Nieuws"
-        title={pageIntro.title}
-        description={pageIntro.description}
-        image={pageIntro.thumbnail?.childImageSharp.fluid}
-      />
+      <Wrapper>
+        <PageIntro
+          pageName="Nieuws"
+          title={pageIntro.title}
+          description={pageIntro.description}
+          image={pageIntro.thumbnail?.childImageSharp.fluid}
+        />
 
-      <div className={styles.articles}>
-        {articles.map((article) => (
-          <Article
-            key={`${article.date}-${article.title}`}
-            className={styles.article}
-            image={article.thumbnail.childImageSharp.fluid}
-            title={article.title}
-            description={article.description}
-            date={new Date(article.date)}
-            url={article.facebookUrl}
-          />
-        ))}
-      </div>
+        <div className={styles.articles}>
+          {articles.map((article) => (
+            <Article
+              key={`${article.date}-${article.title}`}
+              className={styles.article}
+              image={article.thumbnail.childImageSharp.fluid}
+              title={article.title}
+              description={article.description}
+              date={new Date(article.date)}
+              url={article.facebookUrl}
+            />
+          ))}
+        </div>
+      </Wrapper>
     </Layout>
   );
 };
