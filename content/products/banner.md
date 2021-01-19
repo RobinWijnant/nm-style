@@ -1,4 +1,5 @@
 ---
+layout: products-banner
 title: O’right, natuurlijke shampoos en ecologische haarverzorging
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget
   et auctor posuere cursus consequat turpis mattis sed.

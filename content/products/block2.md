@@ -1,4 +1,5 @@
 ---
+layout: products-block2
 title: De groenste ter wereld
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra viverra

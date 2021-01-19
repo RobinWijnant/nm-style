@@ -1,4 +1,5 @@
 ---
+layout: products-block3
 title: Revolutionaire verpakkingen
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra viverra

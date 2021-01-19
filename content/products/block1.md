@@ -1,4 +1,5 @@
 ---
+layout: products-block1
 title: Natuurlijke shampoos
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
   pharetra viverra tempor gravida euismod. Neque sed sed odio sed vulputate.
