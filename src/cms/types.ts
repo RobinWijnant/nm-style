@@ -93,7 +93,7 @@ export interface Review extends CmsDocument {
   layout: "reviews-reviews";
   title: string;
   description: string;
-  thumbnail: {
+  images: {
     childImageSharp: {
       fluid: FluidObject;
     };

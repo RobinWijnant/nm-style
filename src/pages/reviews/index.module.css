@@ -1,0 +1,39 @@
+.review {
+  margin: 100px 0;
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  width: 31%;
+  height: 280px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .images {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .image:first-child {
+    margin-top: 0;
+  }
+}

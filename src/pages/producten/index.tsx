@@ -32,7 +32,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="Prijslijst" />
+      <SEO title="Producten" />
 
       <BackgroundImage
         fluid={banner.thumbnail.childImageSharp.fluid}
