@@ -1,3 +1,7 @@
+.articleImage {
+  height: 500px;
+}
+
 .promote {
   display: flex;
   justify-content: space-between;
@@ -26,6 +30,10 @@
 }
 
 @media (max-width: 800px) {
+  .articleImage {
+    height: 300px;
+  }
+
   .promote {
     flex-direction: column;
   }

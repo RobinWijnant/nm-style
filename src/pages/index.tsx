@@ -31,12 +31,12 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
           {articles.map((article) => (
             <Article
               key={`${article.date}-${article.title}`}
+              imageClassName={styles.articleImage}
               className={styles.article}
               image={article.thumbnail.childImageSharp.fluid}
               title={article.title}
               description={article.description}
               url={article.facebookUrl}
-              imageHeight={500}
             />
           ))}
         </ArticleCarousel>

@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 import fbIcon from "../../assets/icons/fb-icon.png";
 import { FluidObject } from "gatsby-image";
 import { formatDate } from "../../utils/date";
+import clsx from "clsx";
 
 type Props = {
   title: string;
@@ -11,8 +12,8 @@ type Props = {
   image: FluidObject;
   url: string;
   date?: Date;
-  imageHeight?: number;
   className?: string;
+  imageClassName?: string;
 };
 
 const Article: React.FC<Props> = ({
@@ -20,18 +21,14 @@ const Article: React.FC<Props> = ({
   description,
   image,
   url,
-  className,
   date,
-  imageHeight = 300,
+  className,
+  imageClassName,
   children,
 }) => (
   <article className={className}>
     <div className={styles.left}>
-      <Image
-        fluid={image}
-        className={styles.cover}
-        style={{ height: `${imageHeight}px` }}
-      />
+      <Image fluid={image} className={clsx(styles.cover, imageClassName)} />
       {Boolean(date) && (
         <span className={styles.date}>{formatDate(date as Date)}</span>
       )}

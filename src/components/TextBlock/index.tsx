@@ -7,12 +7,14 @@ type Props = {
 
 const TextBlock: React.FC<Props> = ({ paragraphs, className }) => (
   <p className={className}>
-    {paragraphs.split("\n").map((paragraph, index, array) => (
-      <Fragment key={paragraph}>
-        {paragraph}
-        {array.length > index + 1 && <br />}
-      </Fragment>
-    ))}
+    {paragraphs.split("\n").map((paragraph, index, array) => {
+      return (
+        <Fragment key={index}>
+          {paragraph}
+          {array.length > index + 1 && <br />}
+        </Fragment>
+      );
+    })}
   </p>
 );
 
