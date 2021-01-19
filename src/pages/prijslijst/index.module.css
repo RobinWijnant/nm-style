@@ -1,5 +1,5 @@
 .serviceCategories {
-  margin: 200px 0;
+  margin: 150px 0;
 }
 
 .category {
@@ -44,10 +44,6 @@
 }
 
 @media (max-width: 800px) {
-  .serviceCategories {
-    margin: 150px 0;
-  }
-
   .category,
   .category:nth-child(even) {
     flex-direction: column;

@@ -29,7 +29,7 @@ export interface AppointmentInfo extends CmsDocument {
 }
 
 export interface PageIntro extends CmsDocument {
-  layout: "blog-intro" | "priceList-intro" | "reviews-intro";
+  layout: "blog-intro" | "prices-intro" | "reviews-intro";
   title: string;
   description?: string;
   thumbnail?: {
@@ -40,7 +40,7 @@ export interface PageIntro extends CmsDocument {
 }
 
 export interface ServiceCategory extends CmsDocument {
-  layout: "service-category";
+  layout: "prices-categories";
   title: string;
   thumbnail: {
     childImageSharp: {
@@ -55,7 +55,13 @@ export interface Service {
   price: string;
 }
 
-export interface Banner {
+export interface CallToAction extends CmsDocument {
+  layout: "prices-cta" | "reviews-cta";
+  title: string;
+  description: string;
+}
+
+export interface Banner extends CmsDocument {
   layout: "products-banner";
   title: string;
   description?: string;
@@ -66,13 +72,13 @@ export interface Banner {
   };
 }
 
-export interface ProductPageSection {
+export interface ProductPageSection extends CmsDocument {
   layout: "products-block1";
   title: string;
   description: string;
 }
 
-export interface ProductPageSectionWithImage {
+export interface ProductPageSectionWithImage extends CmsDocument {
   layout: "products-block2" | "products-block3";
   title: string;
   description: string;

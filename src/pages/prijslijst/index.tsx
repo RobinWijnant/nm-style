@@ -1,13 +1,18 @@
 import PageIntro from "../../components/PageIntro";
 import { graphql, PageProps } from "gatsby";
 import React from "react";
-import { PageIntro as PageIntroType, ServiceCategory } from "../../cms/types";
+import {
+  CallToAction,
+  PageIntro as PageIntroType,
+  ServiceCategory,
+} from "../../cms/types";
 import Layout from "../../components/Layout";
 import SEO from "../../components/Seo";
 import styles from "./index.module.css";
 import { getCmsDocuments } from "../../cms";
 import Image from "gatsby-image";
 import Wrapper from "../../components/Wrapper";
+import CtaBanner from "../../components/CtaBanner";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -17,6 +22,9 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const [pageIntro] = cmsDocuments.filter(
     (doc) => doc.layout === "prices-intro",
   ) as PageIntroType[];
+  const [cta] = cmsDocuments.filter(
+    (doc) => doc.layout === "prices-cta",
+  ) as CallToAction[];
 
   return (
     <Layout location={location}>
@@ -54,6 +62,8 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
           ))}
         </div>
       </Wrapper>
+
+      <CtaBanner title={cta.title} description={cta.description} />
     </Layout>
   );
 };
