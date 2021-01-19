@@ -7,4 +7,6 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
   ornare. Turpis integer venenatis augue viverra gravida mi scelerisque urna.
   Faucibus purus, vitae in sit vel arcu, diam. Lacus mi nisl ornare vulputate
   cras. Nunc at magna felis turpis donec. Id quam nunc platea feugiat.
+paragraphs:
+  - Hi
 ---
