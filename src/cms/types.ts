@@ -88,3 +88,14 @@ export interface ProductPageSectionWithImage extends CmsDocument {
     };
   };
 }
+
+export interface Review extends CmsDocument {
+  layout: "reviews-reviews";
+  title: string;
+  description: string;
+  thumbnail: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  }[];
+}

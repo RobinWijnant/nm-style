@@ -155,8 +155,7 @@ collections:
                 widget: list
                 collapsed: true
                 label_singular: foto
-                fields:
-                  - { name: thumbnail, label: Foto, widget: image }
+                field: { name: thumbnail, label: Foto, widget: image }
               - { name: title, label: Titel, widget: string }
               - { name: description, label: Beschrijving, widget: text }
       - name: cta
