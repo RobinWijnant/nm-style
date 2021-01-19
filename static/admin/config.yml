@@ -1,11 +1,19 @@
+# netlify Identity
 backend:
   name: git-gateway
 
 locale: nl
+# URL is used to display on the top right
 display_url: https://nm-style.be
 
+# Folder with images
 media_folder: content/assets
+# Path that is appended to image location in markdown
 public_folder: ../assets
+
+# Disable content preview
+editor: 
+  preview: false
 
 collections:
   - name: home-page
@@ -94,14 +102,14 @@ collections:
         fields:
           - { name: layout, label: Layout, widget: hidden, default: products-block1 }
           - { name: title, label: Titel, widget: string }
-          - { name: description, label: Beschrijving, widget: text }
+          - { name: paragraphs, label: Alineas, widget: list }
       - name: block2
         label: Blok met foto rechts
         file: content/products/block2.md
         fields:
           - { name: layout, label: Layout, widget: hidden, default: products-block2 }
           - { name: title, label: Titel, widget: string }
-          - { name: description, label: Beschrijving, widget: text }
+          - { name: paragraphs, label: Beschrijving, widget: list }
           - { name: thumbnail, label: Foto, widget: image }
       - name: block3
         label: Blok met foto links
@@ -109,5 +117,5 @@ collections:
         fields:
           - { name: layout, label: Layout, widget: hidden, default: products-block3 }
           - { name: title, label: Titel, widget: string }
-          - { name: description, label: Beschrijving, widget: text }
+          - { name: paragraphs, label: Beschrijving, widget: list }
           - { name: thumbnail, label: Foto, widget: image }
