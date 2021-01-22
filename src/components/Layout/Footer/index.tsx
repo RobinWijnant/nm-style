@@ -26,6 +26,11 @@ const Footer = () => (
       Website door <a href="https://robinwijnant.me">Robin Wijnant</a>
       <br />
       &copy; 2021 NM-Style. <a href="/admin">Beheer</a>
+      <img
+        src="https://api.netlify.com/api/v1/badges/00cc2e3a-1a2b-4240-996d-4f4fe0bbf0a5/deploy-status"
+        alt="developer build status"
+        className={styles.buildStatus}
+      />
     </p>
 
     <div className={styles.right}>
