@@ -165,3 +165,30 @@ collections:
           - { name: layout, label: Layout, widget: hidden, default: reviews-cta }
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text }
+
+  - name: about-page
+    label: Overpagina
+    files:
+      - name: about
+        label: Over jezelf
+        file: content/about/about.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: about-about }
+          - { name: title, label: Titel, widget: string }
+          - { name: thumbnail, label: Foto, widget: image }
+          - { name: description, label: Beschrijving, widget: text }
+      - name: timeline-list
+        label: Tijdslijn
+        file: content/about/timeline.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: about-timeline }
+          - name: timeline
+            label: Tijdslijn
+            widget: list
+            collapsed: true
+            summary: '{{fields.time}} - {{fields.title}}'
+            label_singular: tijdstip
+            fields:
+              - { name: time, label: Tijdstip, widget: string }
+              - { name: title, label: Titel, widget: string }
+              - { name: description, label: Beschrijving, widget: text }
