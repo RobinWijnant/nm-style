@@ -14,9 +14,11 @@ import Wrapper from "../../components/Wrapper";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
-  const articles = cmsDocuments.filter(
-    (doc) => doc.layout === "article",
-  ) as ArticleType[];
+  const articles = ((cmsDocuments.filter(
+    (doc) => doc.layout === "blog-articles",
+  ) as any)[0].articles as ArticleType[]).sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
   const [pageIntro] = cmsDocuments.filter(
     (doc) => doc.layout === "blog-intro",
   ) as PageIntroType[];
@@ -60,14 +62,25 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             layout
-            date
             description
             title
-            facebookUrl
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 1200) {
                   ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            articles {
+              date
+              facebookUrl
+              description
+              title
+              thumbnail {
+                childImageSharp {
+                  fluid(maxWidth: 1200) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
                 }
               }
             }

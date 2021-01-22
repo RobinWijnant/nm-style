@@ -34,7 +34,7 @@ const Article: React.FC<Props> = ({
       )}
       <h1>{title}</h1>
       <p className={styles.description}>{description}</p>
-      <a href={url} className={styles.fbLink}>
+      <a href={url} className={styles.fbLink} target="_blank" rel="noreferrer">
         <span className={styles.text}>Lezen op</span>
         <img src={fbIcon} alt="Facebook icon" />
       </a>

@@ -39,17 +39,23 @@ collections:
           - { name: title, label: Titel, widget: string }
           - { name: description, label: Beschrijving, widget: text, required: false }
           - { name: thumbnail, label: Foto, widget: image, required: false }
-  - name: articles
-    label: Artikels
-    folder: content/articles
-    create: true
-    fields:
-      - { name: layout, label: Layout, widget: hidden, default: article }
-      - { name: thumbnail, label: Foto, widget: image }
-      - { name: date, label: Datum, widget: date, date_format: true }
-      - { name: title, label: Titel, widget: string }
-      - { name: description, label: Korte beschrijving, widget: text }
-      - { name: facebookUrl, label: Link naar facebook, widget: string }
+      - name: articles-list
+        label: Artikels
+        file: content/blog/articles.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: blog-articles }
+          - name: articles
+            label: Artikels
+            widget: list
+            collapsed: true
+            summary: '{{fields.title}}'
+            label_singular: artikel
+            fields:
+              - { name: thumbnail, label: Foto, widget: image }
+              - { name: date, label: Datum, widget: date, date_format: true }
+              - { name: title, label: Titel, widget: string }
+              - { name: description, label: Korte beschrijving, widget: text }
+              - { name: facebookUrl, label: Link naar facebook, widget: string }
 
   - name: prices-page
     label: Prijslijstpagina
@@ -70,6 +76,7 @@ collections:
           - name: categories
             label: Categorieën
             widget: list
+            collapsed: true
             summary: '{{fields.title}}'
             label_singular: categorie
             fields:
