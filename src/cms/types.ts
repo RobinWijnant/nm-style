@@ -99,3 +99,21 @@ export interface Review extends CmsDocument {
     };
   }[];
 }
+
+export interface AboutInfo extends CmsDocument {
+  layout: "about-about";
+  thumbnail: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+  title: string;
+  description: string;
+}
+
+export interface TimeLineItem extends CmsDocument {
+  layout: "about-timeline";
+  time: string;
+  title: string;
+  description: string;
+}
