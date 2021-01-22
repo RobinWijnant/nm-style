@@ -10,6 +10,7 @@ import { Article as ArticleType, AppointmentInfo } from "../cms/types";
 import Image from "gatsby-image";
 import { getCmsDocuments } from "../cms";
 import Wrapper from "../components/Wrapper";
+import { Fade } from "react-awesome-reveal";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -49,9 +50,15 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
             alt="Afspraak maken teaser"
           />
           <div className={styles.text}>
-            <h2>{appointment.title}</h2>
-            <p>{appointment.description}</p>
-            <Button to="/online-afspraak-maken">Online afspraak</Button>
+            <Fade direction="up" triggerOnce>
+              <h2>{appointment.title}</h2>
+            </Fade>
+            <Fade direction="up" triggerOnce>
+              <p>{appointment.description}</p>
+            </Fade>
+            <Fade direction="up" triggerOnce>
+              <Button to="/online-afspraak-maken">Online afspraak</Button>
+            </Fade>
           </div>
         </div>
       </Wrapper>

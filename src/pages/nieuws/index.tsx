@@ -11,6 +11,7 @@ import SEO from "../../components/Seo";
 import styles from "./index.module.css";
 import { getCmsDocuments } from "../../cms";
 import Wrapper from "../../components/Wrapper";
+import { Fade } from "react-awesome-reveal";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -37,15 +38,20 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
 
         <div className={styles.articles}>
           {articles.map((article) => (
-            <Article
+            <Fade
+              direction="up"
+              triggerOnce
               key={`${article.date}-${article.title}`}
               className={styles.article}
-              image={article.thumbnail.childImageSharp.fluid}
-              title={article.title}
-              description={article.description}
-              date={new Date(article.date)}
-              url={article.facebookUrl}
-            />
+            >
+              <Article
+                image={article.thumbnail.childImageSharp.fluid}
+                title={article.title}
+                description={article.description}
+                date={new Date(article.date)}
+                url={article.facebookUrl}
+              />
+            </Fade>
           ))}
         </div>
       </Wrapper>

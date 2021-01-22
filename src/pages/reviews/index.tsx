@@ -14,6 +14,7 @@ import Image from "gatsby-image";
 import Wrapper from "../../components/Wrapper";
 import CtaBanner from "../../components/CtaBanner";
 import TextBlock from "../../components/TextBlock";
+import { Fade } from "react-awesome-reveal";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -52,11 +53,15 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
                 ))}
               </div>
               <div className={styles.text}>
-                <h3 className={styles.title}>{review.title}</h3>
-                <TextBlock
-                  paragraphs={review.description}
-                  className={styles.description}
-                />
+                <Fade direction="up" triggerOnce>
+                  <h3 className={styles.title}>{review.title}</h3>
+                </Fade>
+                <Fade direction="up" triggerOnce>
+                  <TextBlock
+                    paragraphs={review.description}
+                    className={styles.description}
+                  />
+                </Fade>
               </div>
             </div>
           ))}

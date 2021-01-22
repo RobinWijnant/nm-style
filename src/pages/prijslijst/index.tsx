@@ -13,6 +13,7 @@ import { getCmsDocuments } from "../../cms";
 import Image from "gatsby-image";
 import Wrapper from "../../components/Wrapper";
 import CtaBanner from "../../components/CtaBanner";
+import { Fade } from "react-awesome-reveal";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -46,15 +47,21 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
                 className={styles.image}
               />
               <div className={styles.categoryText}>
-                <h3 className={styles.categoryTitle}>{category.title}</h3>
+                <Fade direction="up" triggerOnce>
+                  <h3 className={styles.categoryTitle}>{category.title}</h3>
+                </Fade>
                 <ul className={styles.services}>
                   {category.services.map((service) => (
-                    <li className={styles.service} key={service.name}>
-                      <span className={styles.serviceName}>{service.name}</span>
-                      <span className={styles.servicePrice}>
-                        {service.price}
-                      </span>
-                    </li>
+                    <Fade direction="up" triggerOnce key={service.name}>
+                      <li className={styles.service}>
+                        <span className={styles.serviceName}>
+                          {service.name}
+                        </span>
+                        <span className={styles.servicePrice}>
+                          {service.price}
+                        </span>
+                      </li>
+                    </Fade>
                   ))}
                 </ul>
               </div>

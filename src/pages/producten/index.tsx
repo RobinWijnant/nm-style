@@ -14,6 +14,7 @@ import BackgroundImage from "gatsby-background-image";
 import TextBlock from "../../components/TextBlock";
 import Wrapper from "../../components/Wrapper";
 import clsx from "clsx";
+import { Fade } from "react-awesome-reveal";
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -48,11 +49,15 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
 
       <Wrapper>
         <div className={styles.section}>
-          <h3 className={styles.title}>{section1.title}</h3>
-          <TextBlock
-            paragraphs={section1.description}
-            className={styles.description}
-          />
+          <Fade direction="up" triggerOnce>
+            <h3 className={styles.title}>{section1.title}</h3>
+          </Fade>
+          <Fade direction="up" triggerOnce>
+            <TextBlock
+              paragraphs={section1.description}
+              className={styles.description}
+            />
+          </Fade>
         </div>
 
         <div className={clsx(styles.section, styles.sectionWithImage)}>
