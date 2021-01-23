@@ -69,5 +69,11 @@ module.exports = {
         icon: `src/assets/logo-square.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-2CKM4CRT42"],
+      },
+    },
   ],
 };

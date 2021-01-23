@@ -5,6 +5,7 @@ import fbIcon from "../../assets/icons/fb-icon.png";
 import { FluidObject } from "gatsby-image";
 import { formatDate } from "../../utils/date";
 import clsx from "clsx";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 type Props = {
   title: string;
@@ -34,10 +35,15 @@ const Article: React.FC<Props> = ({
       )}
       <h1>{title}</h1>
       <p className={styles.description}>{description}</p>
-      <a href={url} className={styles.fbLink} target="_blank" rel="noreferrer">
+      <OutboundLink
+        href={url}
+        className={styles.fbLink}
+        target="_blank"
+        rel="noreferrer"
+      >
         <span className={styles.text}>Lezen op</span>
         <img src={fbIcon} alt="Facebook icon" />
-      </a>
+      </OutboundLink>
     </div>
     <div className={styles.right}>{children}</div>
   </article>

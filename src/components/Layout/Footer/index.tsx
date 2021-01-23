@@ -1,9 +1,9 @@
 import { getCmsDocuments } from "../../../cms";
 import { ContactInfo, OpenHours } from "../../../cms/types";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-
 import styles from "./index.module.css";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 const query = graphql`
   query {
@@ -66,9 +66,12 @@ const Footer: React.FC = () => {
       </div>
 
       <p className={styles.credits}>
-        Website door <a href="https://robinwijnant.me">Robin Wijnant</a>
+        Website door{" "}
+        <OutboundLink href="https://robinwijnant.me">
+          Robin Wijnant
+        </OutboundLink>
         <br />
-        &copy; 2021 NM-Style. <a href="/admin">Beheer</a>
+        &copy; 2021 NM-Style. <Link to="/admin">Beheer</Link>
         <img
           src="https://api.netlify.com/api/v1/badges/00cc2e3a-1a2b-4240-996d-4f4fe0bbf0a5/deploy-status"
           alt="developer build status"
