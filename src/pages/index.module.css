@@ -1,3 +1,9 @@
+.notice {
+  padding: 18px 30px;
+  background-color: var(--color-primary-1);
+  margin: 50px 0;
+}
+
 .articleImage {
   height: 500px;
 }

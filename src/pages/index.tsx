@@ -6,14 +6,18 @@ import styles from "./index.module.css";
 import Article from "../components/Article";
 import Button from "../components/Button";
 import { graphql, PageProps } from "gatsby";
-import { Article as ArticleType, AppointmentInfo } from "../cms/types";
+import { Article as ArticleType, AppointmentInfo, Notice } from "../cms/types";
 import Image from "gatsby-image";
 import { getCmsDocuments } from "../cms";
 import Wrapper from "../components/Wrapper";
 import { Fade } from "react-awesome-reveal";
+import TextBlock from "../components/TextBlock";
 
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
+  const [notice] = cmsDocuments.filter(
+    (doc) => doc.layout === "home-notice",
+  ) as Notice[];
   const articles = ((cmsDocuments.filter(
     (doc) => doc.layout === "blog-articles",
   ) as any)[0].articles as ArticleType[]).sort(
@@ -30,6 +34,9 @@ const Page: React.FC<PageProps> = ({ data }) => {
         titleTemplate={`NM Style - %s`}
       />
       <Wrapper>
+        {notice.enabled && (
+          <TextBlock className={styles.notice} paragraphs={notice.notice} />
+        )}
         <ArticleCarousel>
           {articles.map((article) => (
             <Article
@@ -75,6 +82,8 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             layout
+            notice
+            enabled
             description
             title
             thumbnail {

@@ -21,11 +21,11 @@ collections:
     files:
       - name: notice
         label: Belangrijke mededeling
-        file: content/home/warning.md
+        file: content/home/notice.md
         fields:
           - { name: layout, label: Layout, widget: hidden, default: home-notice }
           - { name: enabled, label: Zichtbaar, widget: boolean }
-          - { name: notice, label: Mededeling, widget: string }
+          - { name: notice, label: Mededeling, widget: text }
       - name: appointment
         label: Afspraak maken
         file: content/home/appointment.md
