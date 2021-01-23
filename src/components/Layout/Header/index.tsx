@@ -4,6 +4,8 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import styles from "./index.module.css";
 import clsx from "clsx";
 import Image, { FixedObject } from "gatsby-image";
+import { getCmsDocuments } from "../../../cms";
+import { ContactInfo } from "../../../cms/types";
 
 type QueryProps = {
   site: {
@@ -17,6 +19,16 @@ type QueryProps = {
   file: {
     childImageSharp: {
       fixed: FixedObject;
+    };
+  };
+  allMarkdownRemark: {
+    edges: {
+      node: {
+        frontmatter: {
+          layout: string;
+          phone: string;
+        };
+      };
     };
   };
 };
@@ -41,11 +53,25 @@ const navItemsQuery = graphql`
         }
       }
     }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            layout
+            phone
+          }
+        }
+      }
+    }
   }
 `;
 
 const Header: React.FC = () => {
   const data = useStaticQuery<QueryProps>(navItemsQuery);
+  const cmsDocuments = getCmsDocuments(data);
+  const [contactInfo] = cmsDocuments.filter(
+    (doc) => doc.layout === "contact-contact",
+  ) as Pick<ContactInfo, "layout" | "phone">[];
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navItems = data.site.siteMetadata.navItems;
   const logoFixedObject = data.file.childImageSharp.fixed;
@@ -67,7 +93,7 @@ const Header: React.FC = () => {
       />
 
       <div className={styles.contact}>
-        <span className={styles.phone}>0470 00 00 00</span>
+        <span className={styles.phone}>{contactInfo.phone}</span>
         <Button to="/online-afspraak-maken">Online afspraak</Button>
       </div>
 
