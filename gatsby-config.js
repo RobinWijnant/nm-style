@@ -4,6 +4,7 @@ module.exports = {
     title: `NM Style`,
     description: `Het kapsalon in regio Oudenaarde (Welden) voor alle leden van het gezin`,
     author: `Robin Wijnant`,
+    siteUrl: "https://nm-style.be",
     navItems: [
       { title: "Home", href: "/" },
       { title: "Nieuws", href: "/nieuws" },
@@ -77,6 +78,15 @@ module.exports = {
           // Puts tracking script in the head instead of the body
           head: false,
         },
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [
+          { userAgent: "*", allow: "/", disallow: ["/admin", "/admin/*"] },
+        ],
       },
     },
   ],
