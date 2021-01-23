@@ -213,7 +213,7 @@ collections:
           - { name: thumbnail, label: Foto, widget: image, required: false }
       - name: contact
         label: Contactgegevens
-        file: content/contact/intro.md
+        file: content/contact/contact.md
         fields:
           - { name: layout, label: Layout, widget: hidden, default: contact-contact }
           - { name: adres-1, label: Adresregel 1, widget: string }
