@@ -4,7 +4,7 @@
 }
 
 .text {
-  margin-right: 50px;
+  max-width: 75%;
 }
 
 .pageName {
@@ -28,6 +28,7 @@
   width: 100%;
   max-width: 520px;
   max-height: 350px;
+  margin-left: 50px;
 }
 
 @media (max-width: 800px) {
@@ -36,7 +37,7 @@
   }
 
   .text {
-    margin: 0;
+    max-width: 100%;
   }
 
   .title {
@@ -46,5 +47,6 @@
   .image {
     height: 300px;
     max-width: 100%;
+    margin: 0;
   }
 }

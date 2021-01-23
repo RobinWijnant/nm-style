@@ -1,0 +1,56 @@
+.contact {
+  display: flex;
+  margin: 100px 0;
+}
+
+.map {
+  width: 60%;
+  height: 450px;
+}
+
+.text {
+  margin-left: 60px;
+}
+
+.item {
+  margin-top: 40px;
+}
+
+.item:first-child {
+  margin-top: 0;
+}
+
+.item .title {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.item .value {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.item .value:first-child {
+  margin-top: 0;
+}
+
+.banner {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .map {
+    width: 100%;
+    height: 350px;
+  }
+
+  .text {
+    margin: 40px 0 0 0;
+  }
+}

@@ -216,12 +216,12 @@ collections:
         file: content/contact/contact.md
         fields:
           - { name: layout, label: Layout, widget: hidden, default: contact-contact }
-          - { name: adres-1, label: Adresregel 1, widget: string }
-          - { name: adres-2, label: Adresregel 2, widget: string }
+          - { name: address-1, label: Adresregel 1, widget: string }
+          - { name: address-2, label: Adresregel 2, widget: string }
           - { name: phone, label: Telefoonnummer, widget: string }
           - { name: email, label: E-mailadres, widget: string }
           - { name: thumbnail, label: Bannerfoto, widget: image }
-      - name: openingHours
+      - name: openHours
         label: Openingsuren
         file: content/contact/openHours.md
         fields:

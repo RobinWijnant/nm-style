@@ -117,3 +117,27 @@ export interface TimeLineItem extends CmsDocument {
   title: string;
   description: string;
 }
+
+export interface ContactInfo extends CmsDocument {
+  layout: "contact-contact";
+  address_1: string;
+  address_2: string;
+  phone: string;
+  email: string;
+  thumbnail: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+}
+
+export interface OpenHours extends CmsDocument {
+  layout: "contact-openHours";
+  monday: string;
+  tuesday: string;
+  wednesday: string;
+  thursday: string;
+  friday: string;
+  saturday: string;
+  sunday: string;
+}
