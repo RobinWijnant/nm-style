@@ -17,7 +17,7 @@ editor:
 
 collections:
   - name: home-page
-    label: Homepagina
+    label: Home
     files:
       - name: appointment
         label: Afspraak maken
@@ -29,7 +29,7 @@ collections:
           - { name: description, label: Beschrijving, widget: text }
 
   - name: blog-page
-    label: Nieuwspagina
+    label: Nieuws
     files:
       - name: intro
         label: Intro
@@ -58,7 +58,7 @@ collections:
               - { name: facebookUrl, label: Link naar facebook, widget: string }
 
   - name: prices-page
-    label: Prijslijstpagina
+    label: Prijslijst
     files:
       - name: intro
         label: Intro
@@ -100,7 +100,7 @@ collections:
           - { name: description, label: Beschrijving, widget: text }
 
   - name: products-page
-    label: Productenpagina
+    label: Producten
     files:
       - name: banner
         label: Banner
@@ -135,7 +135,7 @@ collections:
           - { name: thumbnail, label: Foto, widget: image }
 
   - name: reviews-page
-    label: Reviewspagina
+    label: Reviews
     files:
       - name: intro
         label: Intro
@@ -174,7 +174,7 @@ collections:
           - { name: description, label: Beschrijving, widget: text }
 
   - name: about-page
-    label: Overpagina
+    label: Over
     files:
       - name: about
         label: Over jezelf
