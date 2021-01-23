@@ -1,2 +1,3 @@
+# Fix for crashing build when package.lock is updated
 [build.environment]
   YARN_VERSION = "1.4.0"
