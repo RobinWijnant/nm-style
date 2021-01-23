@@ -24,6 +24,7 @@ collections:
         file: content/home/warning.md
         fields:
           - { name: layout, label: Layout, widget: hidden, default: home-notice }
+          - { name: enabled, label: Zichtbaar, widget: boolean }
           - { name: notice, label: Mededeling, widget: string }
       - name: appointment
         label: Afspraak maken

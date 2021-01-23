@@ -4,6 +4,12 @@ export interface CmsDocument {
   layout: string;
 }
 
+export interface Notice extends CmsDocument {
+  layout: "home-notice";
+  enabled: string;
+  notice: string;
+}
+
 export interface Article extends CmsDocument {
   layout: "article";
   date: string;
