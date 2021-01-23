@@ -89,5 +89,11 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-sdk`,
+      options: {
+        appId: "2871611773123745",
+      },
+    },
   ],
 };
