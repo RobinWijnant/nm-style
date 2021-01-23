@@ -12,7 +12,7 @@ import { getCmsDocuments } from "../cms";
 import Wrapper from "../components/Wrapper";
 import { Fade } from "react-awesome-reveal";
 
-const IndexPage: React.FC<PageProps> = ({ data, location }) => {
+const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const articles = ((cmsDocuments.filter(
     (doc) => doc.layout === "blog-articles",
@@ -24,7 +24,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   ) as AppointmentInfo[];
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO
         title="Kapsalon in Welden (Oudenaarde)"
         titleTemplate={`NM Style - %s`}
@@ -66,7 +66,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   );
 };
 
-export default IndexPage;
+export default Page;
 
 export const pageQuery = graphql`
   query {

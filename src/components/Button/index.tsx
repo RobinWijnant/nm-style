@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 
 type Props = {
   to: string;
-  onClick: () => void;
+  onClick?: () => void;
   className?: string;
 };
 

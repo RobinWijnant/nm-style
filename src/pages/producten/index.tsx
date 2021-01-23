@@ -16,7 +16,7 @@ import Wrapper from "../../components/Wrapper";
 import clsx from "clsx";
 import { Fade } from "react-awesome-reveal";
 
-const IndexPage: React.FC<PageProps> = ({ data, location }) => {
+const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const [banner] = (cmsDocuments.filter(
     (doc) => doc.layout === "products-banner",
@@ -32,7 +32,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   ) as ProductPageSectionWithImage[];
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO title="Producten" />
 
       <BackgroundImage
@@ -92,7 +92,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   );
 };
 
-export default IndexPage;
+export default Page;
 
 export const pageQuery = graphql`
   query {

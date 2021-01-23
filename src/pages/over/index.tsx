@@ -10,7 +10,7 @@ import Wrapper from "../../components/Wrapper";
 import styles from "./index.module.css";
 import { Fade } from "react-awesome-reveal";
 
-const IndexPage: React.FC<PageProps> = ({ data, location }) => {
+const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const [about] = (cmsDocuments.filter(
     (doc) => doc.layout === "about-about",
@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO title="Over" />
 
       <Wrapper>
@@ -73,7 +73,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   );
 };
 
-export default IndexPage;
+export default Page;
 
 export const pageQuery = graphql`
   query {

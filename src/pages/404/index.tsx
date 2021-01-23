@@ -2,10 +2,9 @@ import React from "react";
 import Wrapper from "../../components/Wrapper";
 import Layout from "../../components/Layout";
 import SEO from "../../components/Seo";
+import { PageProps } from "gatsby";
 
-type Props = {};
-
-const NotFoundPage: React.FC<Props> = () => (
+const NotFoundPage: React.FC<PageProps> = () => (
   <Layout>
     <SEO title="Pagina niet gevonden" />
     <Wrapper>

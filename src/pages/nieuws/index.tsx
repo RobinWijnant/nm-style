@@ -13,7 +13,7 @@ import { getCmsDocuments } from "../../cms";
 import Wrapper from "../../components/Wrapper";
 import { Fade } from "react-awesome-reveal";
 
-const IndexPage: React.FC<PageProps> = ({ data, location }) => {
+const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const articles = ((cmsDocuments.filter(
     (doc) => doc.layout === "blog-articles",
@@ -25,7 +25,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   ) as PageIntroType[];
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO title="Nieuws" />
 
       <Wrapper>
@@ -59,7 +59,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   );
 };
 
-export default IndexPage;
+export default Page;
 
 export const pageQuery = graphql`
   query {

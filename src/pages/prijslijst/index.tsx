@@ -15,7 +15,7 @@ import Wrapper from "../../components/Wrapper";
 import CtaBanner from "../../components/CtaBanner";
 import { Fade } from "react-awesome-reveal";
 
-const IndexPage: React.FC<PageProps> = ({ data, location }) => {
+const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const serviceCategories = (cmsDocuments.filter(
     (doc) => doc.layout === "prices-categories",
@@ -28,7 +28,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   ) as CallToAction[];
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO title="Prijslijst" />
 
       <Wrapper>
@@ -75,7 +75,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   );
 };
 
-export default IndexPage;
+export default Page;
 
 export const pageQuery = graphql`
   query {
