@@ -199,3 +199,37 @@ collections:
               - { name: time, label: Tijdstip, widget: string }
               - { name: title, label: Titel, widget: string }
               - { name: description, label: Beschrijving, widget: text }
+
+  - name: contact-page
+    label: Contact
+    files:
+      - name: intro
+        label: Intro
+        file: content/contact/intro.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: contact-intro }
+          - { name: title, label: Titel, widget: string }
+          - { name: description, label: Beschrijving, widget: text, required: false }
+          - { name: thumbnail, label: Foto, widget: image, required: false }
+      - name: contact
+        label: Contactgegevens
+        file: content/contact/intro.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: contact-contact }
+          - { name: adres-1, label: Adresregel 1, widget: string }
+          - { name: adres-2, label: Adresregel 2, widget: string }
+          - { name: phone, label: Telefoonnummer, widget: string }
+          - { name: email, label: E-mailadres, widget: string }
+          - { name: thumbnail, label: Bannerfoto, widget: image }
+      - name: openingHours
+        label: Openingsuren
+        file: content/contact/openHours.md
+        fields:
+          - { name: layout, label: Layout, widget: hidden, default: contact-openHours }
+          - { name: monday, label: Maandag, widget: string }
+          - { name: tuesday, label: Dinsdag, widget: string }
+          - { name: wednesday, label: Woensdag, widget: string }
+          - { name: thursday, label: Donderdag, widget: string }
+          - { name: friday, label: Vrijdag, widget: string }
+          - { name: saturday, label: Zaterdag, widget: string }
+          - { name: sunday, label: Zondag, widget: string }
