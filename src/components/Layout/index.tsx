@@ -1,24 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../../reset.css";
 import "../../index.css";
 import Wrapper from "../../components/Wrapper";
+import RebrandingModal from "../../components/RebrandingModal";
+import Modal from "react-modal";
 
-type Props = {
-  location: Location;
+type Props = {};
+
+const Layout: React.FC<Props> = ({ children }) => {
+  const [isRebrandingModalOpen, setIsRebrandingModalOpen] = React.useState(
+    false,
+  );
+
+  useEffect(() => {
+    Modal.setAppElement("#___gatsby");
+    const urlParams = new URLSearchParams(window.location.search);
+    const referralName = urlParams.get("referral");
+
+    if (referralName === "benna") {
+      setIsRebrandingModalOpen(true);
+
+      if (typeof window !== "undefined") {
+        window.document.body.style.overflow = "hidden";
+      }
+    }
+  }, []);
+
+  const closeRebrandingModal = () => {
+    setIsRebrandingModalOpen(false);
+
+    if (typeof window !== "undefined") {
+      window.document.body.style.overflow = "initial";
+    }
+  };
+
+  return (
+    <>
+      <Wrapper>
+        <Header />
+      </Wrapper>
+      <main>{children}</main>
+      <RebrandingModal
+        isOpen={isRebrandingModalOpen}
+        onRequestClose={closeRebrandingModal}
+      />
+      <Wrapper>
+        <Footer />
+      </Wrapper>
+    </>
+  );
 };
-
-const Layout: React.FC<Props> = ({ children }) => (
-  <>
-    <Wrapper>
-      <Header />
-    </Wrapper>
-    <main>{children}</main>
-    <Wrapper>
-      <Footer />
-    </Wrapper>
-  </>
-);
 
 export default Layout;
