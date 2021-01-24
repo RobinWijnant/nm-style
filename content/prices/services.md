@@ -10,6 +10,7 @@ categories:
         price: € 25
       - name: Enkel tondeuse
         price: € 12
+      - name: Extra dienst
   - title: Brushen
     thumbnail: ../assets/tamara-bellis-zvpozty-0ng-unsplash-1.png
     services:
