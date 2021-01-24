@@ -22,4 +22,10 @@ articles:
 
       Eerste pakket = € 35 , 2de navulling = € 20.
     facebookUrl: https://www.facebook.com/Nm.Style.Welden/photos/a.246082732178557/3449604805159651/
+  - date: 2020-11-21T14:08:59.556Z
+    facebookUrl: https://www.facebook.com/Nm.Style.Welden/posts/3496080137178784
+    title: Koop lokaal.
+    thumbnail: ../assets/promo.jpg
+    description: Wenst u een ecologisch haarverzorgingsproduct of cadeaubon, aarzel
+      dan niet om mij te contacteren.
 ---
