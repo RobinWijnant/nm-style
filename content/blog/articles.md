@@ -28,4 +28,14 @@ articles:
     thumbnail: ../assets/promo.jpg
     description: Wenst u een ecologisch haarverzorgingsproduct of cadeaubon, aarzel
       dan niet om mij te contacteren.
+  - date: 2021-01-18T14:13:36.458Z
+    thumbnail: ../assets/corona-gedult.jpg
+    facebookUrl: https://www.facebook.com/Nm.Style.Welden/posts/3647125165407613
+    title: Bye bye corona coupe
+    description: >-
+      Lieve mensen, kom binnenkort voorbereid naar het kapsalon.
+
+      Zoek reeds vooraf een (nieuwe) haarsnit / haarkleur die u graag ziet.
+
+      Zodra we terug aan de slag mogen, breng dit gerust mee en ik doe zoveel mogelijk mijn best dit bij u te laten passen.
 ---
