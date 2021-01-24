@@ -8,7 +8,7 @@ import SEO from "../../components/Seo";
 import Wrapper from "../../components/Wrapper";
 import styles from "./index.module.css";
 import Image from "gatsby-image";
-import MessageUs from "../../components/MessageUs";
+import * as facebook from "../../utils/facebook";
 
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -61,7 +61,15 @@ const Page: React.FC<PageProps> = ({ data }) => {
             <dl className={styles.item}>
               <dt className={styles.title}>Chat</dt>
               <dd className={styles.value}>
-                <MessageUs />
+                <div
+                  className="fb-messengermessageus"
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+                  // @ts-ignore
+                  messenger_app_id={facebook.appId}
+                  page_id={facebook.pageId}
+                  color="white"
+                  size="standard"
+                />
               </dd>
             </dl>
           </div>

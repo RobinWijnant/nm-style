@@ -6,8 +6,16 @@ import "../../index.css";
 import Wrapper from "../../components/Wrapper";
 import RebrandingModal from "../../components/RebrandingModal";
 import Modal from "react-modal";
+import * as facebook from "../../utils/facebook";
 
 type Props = {};
+
+declare global {
+  interface Window {
+    fbAsyncInit: () => void;
+    FB: any;
+  }
+}
 
 const Layout: React.FC<Props> = ({ children }) => {
   const [isRebrandingModalOpen, setIsRebrandingModalOpen] = React.useState(
@@ -25,6 +33,19 @@ const Layout: React.FC<Props> = ({ children }) => {
       if (typeof window !== "undefined") {
         window.document.body.style.overflow = "hidden";
       }
+    }
+
+    // Init Facebook SDK
+    if (typeof window !== "undefined") {
+      window.fbAsyncInit = function () {
+        window.FB.init({
+          appId: facebook.appId,
+          autoLogAppEvents: true,
+          xfbml: true,
+          version: "v9.0",
+        });
+      };
+      window.fbAsyncInit();
     }
   }, []);
 

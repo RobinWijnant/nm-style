@@ -89,5 +89,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "https://connect.facebook.net/nl_BE/sdk.js",
+        async: "",
+        defer: "",
+        crossorigin: "anonymous",
+      },
+    },
   ],
 };

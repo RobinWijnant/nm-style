@@ -44,14 +44,17 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.connect}>
         <h3 className={styles.title}>Connecteer met NM Style</h3>
-        <iframe
-          className={styles.likeButton}
-          src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FNm.Style.Welden%2F&width=300&layout=standard&action=like&size=small&share=false&height=35&appId"
-          scrolling="no"
-          frameBorder="0"
-          allowFullScreen
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        />
+        <div className={styles.likeButton}>
+          <div
+            className="fb-like"
+            data-href="https://www.facebook.com/Nm.Style.Welden"
+            data-width=""
+            data-layout="standard"
+            data-action="like"
+            data-size="small"
+            data-share="false"
+          />
+        </div>
         <p className={styles.contact}>
           {contactInfo.address_1}
           <br />
