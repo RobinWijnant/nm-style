@@ -1,8 +1,10 @@
 ---
 layout: home-appointment
-thumbnail: ../assets/tamara-bellis-zvpozty-0ng-unsplash-1.png
+thumbnail: ../assets/online-afspraak-maken.jpg
 title: Maak een afspraak op een passende datum
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In odio
-  faucibus etiam nec, non. Lectus turpis duis vehicula pretium nulla auctor.
-  Volutpat vehicula sit integer ipsum.
+description: >-
+  Klink op onderstaande link om online een afspraak te maken dat u het beste
+  past.
+
+  Lukt er iets niet, aarzel dan niet om mij te contacteren.
 ---
