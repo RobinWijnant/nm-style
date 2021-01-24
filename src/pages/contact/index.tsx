@@ -8,7 +8,7 @@ import SEO from "../../components/Seo";
 import Wrapper from "../../components/Wrapper";
 import styles from "./index.module.css";
 import Image from "gatsby-image";
-import clsx from "clsx";
+import MessageUs from "../../components/MessageUs";
 
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
@@ -58,15 +58,12 @@ const Page: React.FC<PageProps> = ({ data }) => {
                 </span>
               </dd>
             </dl>
-            <div
-              className={clsx(styles.messengerButton, "fb-messengermessageus")}
-              // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-              // @ts-ignore
-              messenger_app_id="2871611773123745"
-              page_id="102944285141055"
-              color="white"
-              size="standard"
-            />
+            <dl className={styles.item}>
+              <dt className={styles.title}>Chat</dt>
+              <dd className={styles.value}>
+                <MessageUs />
+              </dd>
+            </dl>
           </div>
         </div>
       </Wrapper>
