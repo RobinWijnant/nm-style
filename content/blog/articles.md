@@ -1,7 +1,7 @@
 ---
 layout: blog-articles
 articles:
-  - thumbnail: ../assets/128649494_3457547371004693_5721637166952648710_n-1.png
+  - thumbnail: ../assets/fb_img_1589346509641.jpg
     date: 2020-05-15T22:00:00.000Z
     title: Coronaproef naar het salon
     description: |-
