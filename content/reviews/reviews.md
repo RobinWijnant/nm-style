@@ -2,9 +2,9 @@
 layout: reviews-reviews
 reviews:
   - images:
-      - ../assets/tamara-bellis-zvpozty-0ng-unsplash.jpg
-      - ../assets/tamara-bellis-zvpozty-0ng-unsplash.jpg
-      - ../assets/tamara-bellis-zvpozty-0ng-unsplash.jpg
+      - ../assets/hannah-olinger-8esrc43qdro-unsplash.jpg
+      - ../assets/hannah-olinger-8esrc43qdro-unsplash.jpg
+      - ../assets/hannah-olinger-8esrc43qdro-unsplash.jpg
     title: Datum
     description: "review klant A "
   - images:
