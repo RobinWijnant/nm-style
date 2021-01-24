@@ -24,4 +24,7 @@ timeline:
   - time: Juni 2006
     title: Afgestudeerd als Hairstylist te Piva Oudenaarde
     description: 7 jaar kappersopleiding.
+  - time: 3 juni 1987
+    title: Geboortedatum
+    description: Klein Natalie'ke werd geboren :-D
 ---
