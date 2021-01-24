@@ -25,7 +25,7 @@ categories:
   - title: Brushen
     thumbnail: ../assets/hair.jpg
     services:
-      - name: Korte lengte ( = +/- 20 min
+      - name: Korte lengte ( = +/- 20 min )
         price: € 18
       - name: Medium lengte ( = 20 tot 40 min )
         price: € 20
