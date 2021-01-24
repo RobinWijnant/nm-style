@@ -1,7 +1,11 @@
 ---
 layout: prices-intro
 title: NM Style verwelkomt iedereen van het gezin
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget
-  et auctor posuere cursus consequat turpis mattis sed.
+description: >-
+  Zowel dames, heren als kinderen van harte welkom.
+
+  Ook met een rolstoel kan u het salon binnen komen. 
+
+  (Helaas kan deze niet aan de wasbak zelf geplaatst worden om de haren te wassen.)
 thumbnail: ../assets/stephan-schmid-bpz0ftzzseg-unsplash.jpg
 ---
