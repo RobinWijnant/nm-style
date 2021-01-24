@@ -11,5 +11,11 @@ description: >-
   Hieronder een korte indicatie van prijzen.
 
   Bij het maken van een online afspraak staan de prijzen ook bij genoteerd. ;-)
+
+  --> Uiteraard doe ik ook haarkleuringen, opsteken en permanenten ! <--
+
+  Deze prijzen zijn net iets meer uitgebreid. 
+
+  Kijk gerust verder bij het maken van een afspraak.
 thumbnail: ../assets/stephan-schmid-bpz0ftzzseg-unsplash.jpg
 ---
