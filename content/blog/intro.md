@@ -1,5 +1,6 @@
 ---
 layout: blog-intro
-title: Het laatste van onze Facebook pagina
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget et auctor posuere cursus consequat turpis mattis sed.
+title: Het laatste update van onze Facebook pagina.
+description: Blijft u graag op de hoogte van alle nieuwtjes, klik dan onder de
+  artikels op deze pagina op vind ik leuk ;-)
 ---
