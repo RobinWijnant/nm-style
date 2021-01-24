@@ -1,10 +1,14 @@
 ---
 layout: about-about
-title: Hoe het allemaal begon
+title: Hoe het allemaal begon...
 thumbnail: ../assets/tamara-bellis-zvpozty-0ng-unsplash-1.png
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst
-  in varius in in ut et, risus aliquet platea. Mi risus sed cursus sollicitudin
-  quam. Viverra ut diam, volutpat lorem ac id arcu aliquam ut. Nulla tincidunt
-  duis ac, ultricies diam auctor velit et. Nam gravida pharetra, scelerisque
-  ultricies.
+description: >-
+  De liefde voor haar heb ik destijds in mijn kinderjaren van mijn meme mee
+  gekregen.
+
+  Toen had ik hele lange haren en elk weekend maakte ze met veel plezier een lange kopvlecht.
+
+  Waardoor ik reeds van mijn 6 jaar kapster wou worden.
+
+  Dank je meme, het gaat je goed daar boven.
 ---
