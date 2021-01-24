@@ -1,10 +1,14 @@
 ---
 layout: products-block1
-title: Natuurlijke shampoos
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-  pharetra viverra tempor gravida euismod. Neque sed sed odio sed vulputate.
-  Tristique massa magnis sit bibendum magna tellus. Praesent duis at viverra
-  ornare. Turpis integer venenatis augue viverra gravida mi scelerisque urna.
-  Faucibus purus, vitae in sit vel arcu, diam. Lacus mi nisl ornare vulputate
-  cras. Nunc at magna felis turpis donec. Id quam nunc platea feugiat.
+title: Waarom O'right?
+description: >-
+  Elk product dat we gebruiken, heeft een invloed op ons lichaam en onze
+  gezondheid, maar ook op het welzijn van onze mooie planeet. De shampoos,
+  conditioners, stylingproducten en verzorgingen van O'right bevatten
+  gecertificeerde, natuurlijke ingrediënten en GEEN schadelijke, overbodige
+  additieven zoals parabenen, hormonen, kleurstoffen enz. Zowel ons haar als
+  onze hoofdhuid worden hier zichtbaar mooier én gezonder van.
+
+
+  Maar O'right gaat nog verder. Onze verpakkingen bestaan uit FSC-papier, bedrukt met natuurlijke soja-inkt. Onze flesjes zijn vervaardigd uit recycleerbaar materiaal, en bevatten een ecologische bamboe-dop. En dan zijn er nog onze Tree-In-The -Bottles.... Deze flesjes zijn VOLLEDIG BIOLOGISCH AFBREEKBAAR en bevatten bovendien een echt boomzaadje: Plant het in de vruchtbare grond, en er zal een ECHTE BOOM uit groeien...
 ---
