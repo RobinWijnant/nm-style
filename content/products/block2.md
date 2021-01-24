@@ -1,17 +1,13 @@
 ---
 layout: products-block2
 title: De groenste ter wereld
-description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra viverra
-  tempor gravida euismod. Neque sed sed odio sed vulputate. Tristique massa
-  magnis sit bibendum magna tellus. Praesent duis at viverra ornare. Turpis
-  integer venenatis augue viverra gravida mi scelerisque urna. Faucibus purus,
-  vitae in sit vel arcu, diam.
-
-
-  Tristique massa magnis sit bibendum magna tellus. Praesent duis at viverra ornare. Turpis integer venenatis augue viverra gravida mi scelerisque urna. Faucibus purus, vitae in sit vel arcu, diam.
-
-
-  Tristique massa magnis sit bibendum magna tellus. Praesent duis at viverra ornare. Turpis integer venenatis augue viverra gravida mi scelerisque urna. Faucibus purus
-thumbnail: ../assets/ultra-free-mud-1.jpg
+description: |-
+  Shampoo's :  100 ml = € 9,50  -  250 ml = € 19,40  -  400 ml = € 26.
+  Conditioners : 250 ml = € 23   -   Recoffee = € 26.
+  Scalp spray : 50 ml = € 13.
+  Body Wash : € 23
+  Wax : 50 ml = € 26.
+  Krul / Style cream : 100 ml = € 26.
+  Oil : 100 ml = € 32.
+thumbnail: ../assets/producten.jpg
 ---
