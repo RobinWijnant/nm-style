@@ -1,6 +1,8 @@
 ---
 layout: contact-intro
-title: Spring gerust eens binnen
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget
-  et auctor posuere cursus consequat turpis mattis sed.
+title: Place to be.
+description: |-
+  Hebt u vragen?
+  Of wilt u simpelweg weten waar mijn kapsalon zich bevind?
+  Spring gerust eens binnen.
 ---
