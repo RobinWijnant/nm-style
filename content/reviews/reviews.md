@@ -5,7 +5,7 @@ reviews:
       - ../assets/hannah-olinger-8esrc43qdro-unsplash.jpg
       - ../assets/hannah-olinger-8esrc43qdro-unsplash.jpg
       - ../assets/hannah-olinger-8esrc43qdro-unsplash.jpg
-    title: "Eerste bezoek reeds van "
+    title: Eerste bezoek reeds van 2013
     description: Een kapster waar je je als klant goed voelt. Je bent geen nummer
       als je plaats neemt in de kappersstoel. Ook de attenties op speciale dagen
       zijn aangenaam. In deze tijden is dit uiterst zeldzaam. Je weet je
