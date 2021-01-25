@@ -17,5 +17,7 @@ description: >-
   Deze prijzen zijn net iets meer uitgebreid. 
 
   Kijk gerust verder bij het maken van een afspraak.
+
+  NIEUW : Binnenkort ook kleine gelaatsverzorgingen !!
 thumbnail: ../assets/stephan-schmid-bpz0ftzzseg-unsplash.jpg
 ---
