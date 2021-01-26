@@ -19,5 +19,5 @@ description: >-
   Kijk gerust verder bij het maken van een afspraak.
 
   NIEUW : Binnenkort ook kleine gelaatsverzorgingen !!
-thumbnail: ../assets/stephan-schmid-bpz0ftzzseg-unsplash.jpg
+thumbnail: ../assets/prijslijst-ingang.jpg
 ---
