@@ -51,7 +51,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
                   <h3 className={styles.categoryTitle}>{category.title}</h3>
                 </Fade>
                 <ul className={styles.services}>
-                  {category.services.map((service) => (
+                  {(category.services ?? []).map((service) => (
                     <Fade direction="up" triggerOnce key={service.name}>
                       <li className={styles.service}>
                         <span className={styles.serviceName}>

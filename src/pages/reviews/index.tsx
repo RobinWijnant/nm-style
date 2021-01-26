@@ -44,7 +44,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
           {reviews.map((review) => (
             <div className={styles.review} key={review.title}>
               <div className={styles.images}>
-                {review.images.map((image) => (
+                {(review.images ?? []).map((image) => (
                   <Image
                     key={image.childImageSharp.fluid.src}
                     fluid={image.childImageSharp.fluid}
