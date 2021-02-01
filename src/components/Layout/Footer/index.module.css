@@ -36,13 +36,13 @@
 .credits {
   grid-area: credits;
   margin-top: 30px;
-  color: var(--color-neutral-6);
+  color: var(--color-neutral-7);
   font-size: 12px;
   line-height: 2;
 }
 
 .credits > a {
-  color: var(--color-neutral-6);
+  color: var(--color-neutral-7);
 }
 
 .buildStatus {

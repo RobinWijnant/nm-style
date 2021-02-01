@@ -51,7 +51,7 @@ const RebrandingModal: React.FC<Props> = ({ isOpen, onRequestClose }) => {
   return (
     <Modal
       isOpen={isOpen}
-      contentLabel="Benna wordt nm-style"
+      contentLabel="Benna wordt nm style"
       className={styles.modal}
     >
       <div className={styles.content}>
@@ -65,7 +65,7 @@ const RebrandingModal: React.FC<Props> = ({ isOpen, onRequestClose }) => {
         <Image
           className={styles.nmStyleLogo}
           fixed={nmStyleLogo}
-          alt="nm-style logo"
+          alt="nm style logo"
         />
         <Button
           to="/"

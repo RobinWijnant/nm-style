@@ -38,6 +38,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
       <BackgroundImage
         fluid={banner.thumbnail.childImageSharp.fluid}
         className={styles.banner}
+        alt="Banner van producten"
       >
         <div className={styles.whitenImage}>
           <div className={styles.text}>
@@ -64,6 +65,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
           <Image
             fluid={section2.thumbnail.childImageSharp.fluid}
             className={styles.image}
+            alt="Producten overzicht"
           />
           <div className={styles.text}>
             <h3 className={styles.title}>{section2.title}</h3>
@@ -78,6 +80,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
           <Image
             fluid={section3.thumbnail.childImageSharp.fluid}
             className={styles.image}
+            alt="Producten overzicht"
           />
           <div className={styles.text}>
             <h3 className={styles.title}>{section3.title}</h3>

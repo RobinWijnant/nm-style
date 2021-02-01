@@ -37,6 +37,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
             frameBorder="0"
             src="https://www.google.com/maps/embed/v1/place?q=NM%20Style%20Welden&key=AIzaSyA-RmQvUcaHqPyKDwrprfGiHxlTJsAfOV4"
             allowFullScreen
+            title="messenger chat met ons knop"
           />
           <div className={styles.text}>
             <dl className={styles.item}>
@@ -79,6 +80,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
       <Image
         fluid={contactInfo.thumbnail.childImageSharp.fluid}
         className={styles.banner}
+        alt="foto van het kapsalon buiten"
       />
     </Layout>
   );

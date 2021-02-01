@@ -46,6 +46,7 @@ const Footer: React.FC = () => {
       <div className={styles.connect}>
         <h3 className={styles.title}>Connecteer met NM Style</h3>
         <iframe
+          title="facebook like knop"
           className={styles.likeButton}
           src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FNm.Style.Welden%2F&width=300&layout=standard&action=like&size=small&share=false&height=35&appId"
           scrolling="no"

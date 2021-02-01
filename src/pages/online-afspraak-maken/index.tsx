@@ -15,6 +15,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
         </Link>
 
         <iframe
+          title="afspraak maken plugin"
           className={styles.iframe}
           src="https://hair-en-beauty-benna.salonized.com/bookings/new/?layout=embed"
         />

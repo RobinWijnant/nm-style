@@ -74,13 +74,27 @@ const ArticleCarousel: React.FC<Props> = ({ children }) => {
           ></div>
         </div>
         <div className={styles.controls}>
-          <img src={previousIcon} onClick={handlePreviousClick} role="button" />
+          <img
+            src={previousIcon}
+            onClick={handlePreviousClick}
+            role="button"
+            alt="previous article"
+            aria-label="previous article"
+          />
           <img
             src={stopIcon}
             onClick={() => setIsAutoPlayEnabled(false)}
             role="button"
+            alt="stop carousel"
+            aria-label="stop carousel"
           />
-          <img src={nextIcon} onClick={handleNextClick} role="button" />
+          <img
+            src={nextIcon}
+            onClick={handleNextClick}
+            role="button"
+            alt="next article"
+            aria-label="next article"
+          />
         </div>
       </div>
     </div>

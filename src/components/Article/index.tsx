@@ -29,7 +29,11 @@ const Article: React.FC<Props> = ({
 }) => (
   <article className={className}>
     <div className={styles.left}>
-      <Image fluid={image} className={clsx(styles.cover, imageClassName)} />
+      <Image
+        fluid={image}
+        className={clsx(styles.cover, imageClassName)}
+        alt={title}
+      />
       {Boolean(date) && (
         <span className={styles.date}>{formatDate(date as Date)}</span>
       )}

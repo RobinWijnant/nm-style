@@ -22,7 +22,13 @@ const PageIntro: React.FC<Props> = ({
       <h2 className={styles.title}>{title}</h2>
       <p className={styles.description}>{description}</p>
     </div>
-    {image && <Image fluid={image} className={styles.image} />}
+    {image && (
+      <Image
+        fluid={image}
+        className={styles.image}
+        alt={`${pageName} / ${title}`}
+      />
+    )}
   </div>
 );
 

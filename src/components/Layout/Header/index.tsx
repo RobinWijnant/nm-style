@@ -89,7 +89,7 @@ const Header: React.FC = () => {
       <Image
         className={styles.logo}
         fixed={logoFixedObject}
-        alt="NM-Style logo"
+        alt="NM Style logo"
       />
 
       <div className={styles.contact}>

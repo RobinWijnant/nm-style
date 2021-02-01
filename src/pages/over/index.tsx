@@ -32,6 +32,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
               <Image
                 className={styles.image}
                 fluid={about.thumbnail.childImageSharp.fluid}
+                alt="Portret natalie meirlaen"
               />
               <h1 className={styles.title}>
                 {about.title.split(" ").map((word, index) => (

@@ -49,6 +49,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
                     key={image.childImageSharp.fluid.src}
                     fluid={image.childImageSharp.fluid}
                     className={styles.image}
+                    alt={`Kapsel van ${review.title}`}
                   />
                 ))}
               </div>

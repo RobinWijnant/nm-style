@@ -45,6 +45,7 @@ const Page: React.FC<PageProps> = ({ data }) => {
               <Image
                 fluid={category.thumbnail.childImageSharp.fluid}
                 className={styles.image}
+                alt={`${category.title} thumbnail`}
               />
               <div className={styles.categoryText}>
                 <Fade direction="up" triggerOnce>
