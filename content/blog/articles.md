@@ -38,4 +38,11 @@ articles:
       Zoek reeds vooraf een (nieuwe) haarsnit / haarkleur die u graag ziet.
 
       Zodra we terug aan de slag mogen, breng dit gerust mee en ik doe zoveel mogelijk mijn best dit bij u te laten passen.
+  - date: 2021-02-03T09:05:15.776Z
+    thumbnail: ../assets/nieuwe-website-online.jpg
+    title: Lancering www.nm-style.be
+    description: |-
+      Met trots presenteer ik jullie mijn nieuwe website.
+      Laat ons nu maar rap weer mogen starten met werken.
+    facebookUrl: https://www.facebook.com/meirlaen.natalie/posts/10223493371657731?notif_id=1612346409585904&notif_t=feedback_reaction_generic&ref=notif
 ---
