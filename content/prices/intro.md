@@ -10,7 +10,7 @@ description: >-
 
   Hieronder een korte indicatie van prijzen.
 
-  Bij het maken van een online afspraak staan de prijzen ook bij genoteerd. ;-)
+  Bij het maken van een online afspraak staan de prijzen ook bij genoteerd.  ;-)
 
   --> Uiteraard doe ik ook haarkleuringen, opsteken en permanenten ! <--
 
