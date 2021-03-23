@@ -30,4 +30,22 @@ articles:
     title: Binnenkort wordt uw haar ook gerecycleerd.
     thumbnail: ../assets/161635251_1145788012528415_1778014020296705525_n.jpg
     facebookUrl: https://www.facebook.com/Nm.Style.Welden/photos/a.246082732178557/3802727803180681/
+  - date: 2021-03-23T14:06:40.761Z
+    facebookUrl: https://www.facebook.com/Nm.Style.Welden/photos/pcb.3818312091622252/3818306998289428
+    title: Update Corona maatregel
+    description: >-
+      Lieve klantjes,
+
+      laat ons de vingers kruisen dat de kapsalons open mogen blijven, ik hou jullie op de hoogte 😉
+
+      Graag wil ik er jullie er op wijzen dat ik alvast de leeftijd voor mondmaskerplicht in mijn kapsalon wat aanpas.
+
+      Vanaf 6 jaar.
+
+      --> Hiervoor heb ik alvast voor de jongsten kinderwegwerpmaskertjes voor handen.
+
+      Laten we samen blijven strijden om dat verdomde virus klein te krijgen.
+
+      Groetjes Natalie
+    thumbnail: ../assets/163839112_289286232657790_1214795773671990731_n.jpg
 ---
