@@ -5,13 +5,13 @@ export interface CmsDocument {
 }
 
 export interface Notice extends CmsDocument {
-  layout: "home-notice";
+  layout: "/home/notice/";
   enabled: string;
   notice: string;
 }
 
 export interface Article extends CmsDocument {
-  layout: "article";
+  layout: "/blog/article/";
   date: string;
   title: string;
   description: string;
@@ -24,7 +24,7 @@ export interface Article extends CmsDocument {
 }
 
 export interface AppointmentInfo extends CmsDocument {
-  layout: "home-appointment";
+  layout: "/home/appointment/";
   title: string;
   description: string;
   thumbnail: {
@@ -35,7 +35,7 @@ export interface AppointmentInfo extends CmsDocument {
 }
 
 export interface PageIntro extends CmsDocument {
-  layout: "blog-intro" | "prices-intro" | "reviews-intro";
+  layout: "/blog/intro/" | "/prices/intro/" | "/reviews/intro/";
   title: string;
   description?: string;
   thumbnail?: {
@@ -46,7 +46,7 @@ export interface PageIntro extends CmsDocument {
 }
 
 export interface ServiceCategory extends CmsDocument {
-  layout: "prices-categories";
+  layout: "/prices/categories/";
   title: string;
   thumbnail: {
     childImageSharp: {
@@ -62,13 +62,13 @@ export interface Service {
 }
 
 export interface CallToAction extends CmsDocument {
-  layout: "prices-cta" | "reviews-cta";
+  layout: "/prices/cta/" | "/reviews/cta/";
   title: string;
   description: string;
 }
 
 export interface Banner extends CmsDocument {
-  layout: "products-banner";
+  layout: "/products/banner/";
   title: string;
   description?: string;
   thumbnail: {
@@ -79,13 +79,13 @@ export interface Banner extends CmsDocument {
 }
 
 export interface ProductPageSection extends CmsDocument {
-  layout: "products-block1";
+  layout: "/products/block1/";
   title: string;
   description: string;
 }
 
 export interface ProductPageSectionWithImage extends CmsDocument {
-  layout: "products-block2" | "products-block3";
+  layout: "/products/block2/" | "/products/block3/";
   title: string;
   description: string;
   thumbnail: {
@@ -96,7 +96,7 @@ export interface ProductPageSectionWithImage extends CmsDocument {
 }
 
 export interface Review extends CmsDocument {
-  layout: "reviews-reviews";
+  layout: "/reviews/reviews/";
   title: string;
   description: string;
   images: {
@@ -107,7 +107,7 @@ export interface Review extends CmsDocument {
 }
 
 export interface AboutInfo extends CmsDocument {
-  layout: "about-about";
+  layout: "/about/about/";
   thumbnail: {
     childImageSharp: {
       fluid: FluidObject;
@@ -118,7 +118,7 @@ export interface AboutInfo extends CmsDocument {
 }
 
 export interface TimeLineItem extends CmsDocument {
-  layout: "about-timeline";
+  layout: "/about/timeline/";
   time: string;
   title: string;
   description: string;
@@ -138,7 +138,7 @@ export interface ContactInfo extends CmsDocument {
 }
 
 export interface OpenHours extends CmsDocument {
-  layout: "contact-openHours";
+  layout: "/contact/openHours/";
   monday: string;
   tuesday: string;
   wednesday: string;
