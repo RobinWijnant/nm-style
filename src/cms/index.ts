@@ -3,7 +3,6 @@ import { CmsDocument } from "./types";
 
 export const getCmsDocuments = (data: any) => {
   const docs = data.allMarkdownRemark.edges.map(({ node }: any) => {
-    console.log(node);
     return {
       ...node.frontmatter,
       layout: node.fields.filePath,
