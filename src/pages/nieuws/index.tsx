@@ -16,12 +16,12 @@ import { Fade } from "react-awesome-reveal";
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const articles = ((cmsDocuments.filter(
-    (doc) => doc.layout === "blog-articles",
+    (doc) => doc.layout === "/blog/articles/",
   ) as any)[0].articles as ArticleType[]).sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
   const [pageIntro] = cmsDocuments.filter(
-    (doc) => doc.layout === "blog-intro",
+    (doc) => doc.layout === "/blog/intro/",
   ) as PageIntroType[];
 
   return (
@@ -63,11 +63,17 @@ export default Page;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          filePath: { in: ["/blog/intro/", "/blog/articles/"] }
+          sourceName: { eq: "content" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             description
             title
             thumbnail {
@@ -90,6 +96,9 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            filePath
           }
         }
       }

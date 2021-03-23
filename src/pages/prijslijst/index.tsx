@@ -18,13 +18,13 @@ import { Fade } from "react-awesome-reveal";
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const serviceCategories = (cmsDocuments.filter(
-    (doc) => doc.layout === "prices-categories",
+    (doc) => doc.layout === "/prices/services/",
   ) as any)[0].categories as ServiceCategory[];
   const [pageIntro] = cmsDocuments.filter(
-    (doc) => doc.layout === "prices-intro",
+    (doc) => doc.layout === "/prices/intro/",
   ) as PageIntroType[];
   const [cta] = cmsDocuments.filter(
-    (doc) => doc.layout === "prices-cta",
+    (doc) => doc.layout === "/prices/cta/",
   ) as CallToAction[];
 
   return (
@@ -80,11 +80,19 @@ export default Page;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          filePath: {
+            in: ["/prices/services/", "/prices/intro/", "/prices/cta/"]
+          }
+          sourceName: { eq: "content" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             title
             description
             thumbnail {
@@ -108,6 +116,9 @@ export const pageQuery = graphql`
               }
               title
             }
+          }
+          fields {
+            filePath
           }
         }
       }

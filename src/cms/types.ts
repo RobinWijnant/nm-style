@@ -125,7 +125,7 @@ export interface TimeLineItem extends CmsDocument {
 }
 
 export interface ContactInfo extends CmsDocument {
-  layout: "contact-contact";
+  layout: "/contact/contact/";
   address_1: string;
   address_2: string;
   phone: string;

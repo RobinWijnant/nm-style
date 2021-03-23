@@ -1,6 +1,9 @@
 # netlify Identity
 backend:
-  name: git-gateway
+  # name: git-gateway
+  name: github
+  repo: robinwijnant/nm-style
+  branch: fix-layout
 
 locale: nl
 # URL is used to display on the top right

@@ -19,16 +19,16 @@ import { Fade } from "react-awesome-reveal";
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const [banner] = (cmsDocuments.filter(
-    (doc) => doc.layout === "products-banner",
+    (doc) => doc.layout === "/products/banner/",
   ) as any) as Banner[];
   const [section1] = cmsDocuments.filter(
-    (doc) => doc.layout === "products-block1",
+    (doc) => doc.layout === "/products/block1/",
   ) as ProductPageSection[];
   const [section2] = cmsDocuments.filter(
-    (doc) => doc.layout === "products-block2",
+    (doc) => doc.layout === "/products/block2/",
   ) as ProductPageSectionWithImage[];
   const [section3] = cmsDocuments.filter(
-    (doc) => doc.layout === "products-block3",
+    (doc) => doc.layout === "/products/block3/",
   ) as ProductPageSectionWithImage[];
 
   return (
@@ -99,11 +99,24 @@ export default Page;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          filePath: {
+            in: [
+              "/products/banner/"
+              "/products/block1/"
+              "/products/block2/"
+              "/products/block3/"
+            ]
+          }
+          sourceName: { eq: "content" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             title
             description
             thumbnail {
@@ -113,6 +126,9 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            filePath
           }
         }
       }

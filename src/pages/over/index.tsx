@@ -13,10 +13,10 @@ import { Fade } from "react-awesome-reveal";
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const [about] = (cmsDocuments.filter(
-    (doc) => doc.layout === "about-about",
+    (doc) => doc.layout === "/about/about/",
   ) as any) as AboutInfo[];
   const timelineItems = (cmsDocuments.filter(
-    (doc) => doc.layout === "about-timeline",
+    (doc) => doc.layout === "/about/timeline/",
   ) as any)[0].timeline as TimeLineItem[];
 
   const currentYear = new Date().getFullYear();
@@ -78,11 +78,17 @@ export default Page;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          filePath: { in: ["/about/about/", "/about/timeline/"] }
+          sourceName: { eq: "content" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 1200) {
@@ -97,6 +103,9 @@ export const pageQuery = graphql`
               title
               description
             }
+          }
+          fields {
+            filePath
           }
         }
       }

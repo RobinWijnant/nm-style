@@ -25,8 +25,10 @@ type QueryProps = {
     edges: {
       node: {
         frontmatter: {
-          layout: string;
           phone: string;
+        };
+        fields: {
+          filePath: string;
         };
       };
     };
@@ -53,12 +55,21 @@ const navItemsQuery = graphql`
         }
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          sourceName: { eq: "content" }
+          filePath: { eq: "/contact/contact/" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             phone
+          }
+          fields {
+            filePath
           }
         }
       }
@@ -70,7 +81,7 @@ const Header: React.FC = () => {
   const data = useStaticQuery<QueryProps>(navItemsQuery);
   const cmsDocuments = getCmsDocuments(data);
   const [contactInfo] = cmsDocuments.filter(
-    (doc) => doc.layout === "contact-contact",
+    (doc) => doc.layout === "/contact/contact/",
   ) as Pick<ContactInfo, "layout" | "phone">[];
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navItems = data.site.siteMetadata.navItems;

@@ -16,15 +16,15 @@ import TextBlock from "../components/TextBlock";
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const [notice] = cmsDocuments.filter(
-    (doc) => doc.layout === "home-notice",
+    (doc) => doc.layout === "/home/notice/",
   ) as Notice[];
   const articles = ((cmsDocuments.filter(
-    (doc) => doc.layout === "blog-articles",
+    (doc) => doc.layout === "/blog/articles/",
   ) as any)[0].articles as ArticleType[]).sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
   const [appointment] = cmsDocuments.filter(
-    (doc) => doc.layout === "home-appointment",
+    (doc) => doc.layout === "/home/appointment/",
   ) as AppointmentInfo[];
 
   return (
@@ -77,11 +77,19 @@ export default Page;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          filePath: {
+            in: ["/home/notice/", "/blog/articles/", "/home/appointment/"]
+          }
+          sourceName: { eq: "content" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             notice
             enabled
             description
@@ -106,6 +114,9 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            filePath
           }
         }
       }

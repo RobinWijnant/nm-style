@@ -13,10 +13,10 @@ import * as facebook from "../../utils/facebook";
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const [pageIntro] = cmsDocuments.filter(
-    (doc) => doc.layout === "contact-intro",
+    (doc) => doc.layout === "/contact/intro/",
   ) as PageIntroType[];
   const [contactInfo] = cmsDocuments.filter(
-    (doc) => doc.layout === "contact-contact",
+    (doc) => doc.layout === "/contact/contact/",
   ) as ContactInfo[];
 
   return (
@@ -90,11 +90,17 @@ export default Page;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          filePath: { in: ["/contact/intro/", "/contact/contact/"] }
+          sourceName: { eq: "content" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             title
             description
             address_1
@@ -108,6 +114,9 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            filePath
           }
         }
       }

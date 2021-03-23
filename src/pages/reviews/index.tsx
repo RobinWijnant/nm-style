@@ -19,13 +19,13 @@ import { Fade } from "react-awesome-reveal";
 const Page: React.FC<PageProps> = ({ data }) => {
   const cmsDocuments = getCmsDocuments(data);
   const reviews = (cmsDocuments.filter(
-    (doc) => doc.layout === "reviews-reviews",
+    (doc) => doc.layout === "/reviews/reviews/",
   ) as any)[0].reviews as Review[];
   const [pageIntro] = cmsDocuments.filter(
-    (doc) => doc.layout === "reviews-intro",
+    (doc) => doc.layout === "/reviews/intro/",
   ) as PageIntroType[];
   const [cta] = cmsDocuments.filter(
-    (doc) => doc.layout === "reviews-cta",
+    (doc) => doc.layout === "/reviews/cta/",
   ) as CallToAction[];
 
   return (
@@ -78,11 +78,19 @@ export default Page;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          filePath: {
+            in: ["/reviews/reviews/", "/reviews/intro/", "/reviews/cta/"]
+          }
+          sourceName: { eq: "content" }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             title
             description
             reviews {
@@ -96,6 +104,9 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            filePath
           }
         }
       }

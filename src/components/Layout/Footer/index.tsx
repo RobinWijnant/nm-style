@@ -4,15 +4,20 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import styles from "./index.module.css";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
-import clsx from "clsx";
 
 const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          sourceName: { eq: "content" }
+          filePath: { in: ["/contact/contact/", "/contact/openHours/"] }
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {
-            layout
             address_1
             address_2
             email
@@ -25,6 +30,9 @@ const query = graphql`
             tuesday
             wednesday
           }
+          fields {
+            filePath
+          }
         }
       }
     }
@@ -35,10 +43,10 @@ const Footer: React.FC = () => {
   const data = useStaticQuery(query);
   const cmsDocuments = getCmsDocuments(data);
   const [contactInfo] = cmsDocuments.filter(
-    (doc) => doc.layout === "contact-contact",
+    (doc) => doc.layout === "/contact/contact/",
   ) as ContactInfo[];
   const [openHours] = cmsDocuments.filter(
-    (doc) => doc.layout === "contact-openHours",
+    (doc) => doc.layout === "/contact/openHours/",
   ) as OpenHours[];
 
   return (
