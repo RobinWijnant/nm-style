@@ -1,5 +1,4 @@
 ---
-layout: contact-intro
 title: Place to be.
 description: >-
   Hebt u vragen?

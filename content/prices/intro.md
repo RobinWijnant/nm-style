@@ -1,5 +1,4 @@
 ---
-layout: prices-intro
 title: NM Style verwelkomt iedereen van het gezin
 description: >-
   Zowel dames, heren als kinderen van harte welkom.

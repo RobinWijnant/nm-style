@@ -1,5 +1,4 @@
 ---
-layout: prices-categories
 categories:
   - title: Knippen
     thumbnail: ../assets/haar-op-de-grond.jpg

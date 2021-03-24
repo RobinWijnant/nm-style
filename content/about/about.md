@@ -1,5 +1,4 @@
 ---
-layout: about-about
 title: Hoe het allemaal begon...
 thumbnail: ../assets/tamara-bellis-zvpozty-0ng-unsplash-1.png
 description: >-

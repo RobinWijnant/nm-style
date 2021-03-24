@@ -1,5 +1,4 @@
 ---
-layout: home-appointment
 thumbnail: ../assets/online-afspraak-maken.jpg
 title: Maak een afspraak op een passende datum
 description: >-

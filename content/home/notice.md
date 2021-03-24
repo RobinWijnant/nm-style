@@ -1,5 +1,4 @@
 ---
-layout: home-notice
 enabled: true
 notice: |
   Beste klanten, WELKOM op de nieuwe website. 

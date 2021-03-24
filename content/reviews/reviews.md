@@ -1,11 +1,12 @@
 ---
-layout: reviews-reviews
 reviews:
   - images:
       - ../assets/hannah-olinger-8esrc43qdro-unsplash.jpg
-    title: Eerste bezoek reeds van 2013, dankzij een collega hier terecht gekomen.
+    title:
+      Eerste bezoek reeds van 2013, dankzij een collega hier terecht gekomen.
       Kathy VdL
-    description: Een kapster waar je je als klant goed voelt. Je bent geen nummer
+    description:
+      Een kapster waar je je als klant goed voelt. Je bent geen nummer
       als je plaats neemt in de kappersstoel. Ook de attenties op speciale dagen
       zijn aangenaam. In deze tijden is dit uiterst zeldzaam. Je weet je
       duidelijk te onderscheiden van de grote zaken met je persoonlijke inbreng.
@@ -33,7 +34,8 @@ reviews:
   - title: 27/02/2020 Felice W.
     description: Gezellig moment bij een topmadam!!!
   - title: 08/02/2020 Crystallynn G
-    description: Super fijn om daar je haren te laten doen. Super vriendelijk. Niet
+    description:
+      Super fijn om daar je haren te laten doen. Super vriendelijk. Niet
       te duur... en wordt gedaan zoals gevraagd. Zeker aanrader als kapster!
   - images:
       - ../assets/tamara-bellis-zvpozty-0ng-unsplash.jpg
@@ -59,20 +61,23 @@ reviews:
       kleur, oogt heel naturel, je ziet niet dat het gekleurd is (wat ik net
       wou!)
   - title: 14/05/2019 Silke T.
-    description: De kapster houdt zeer goed rekening met je wensen en begrijpt wat
+    description:
+      De kapster houdt zeer goed rekening met je wensen en begrijpt wat
       je met je haar wil aanvangen. Als je vraagt om enkel de puntjes te
       knippen, zijn ook enkel de puntjes eraf.
   - title: 05/04/2019 John G.
     description: Snel en prachtig geknipt, zonder wachttijden. Ik blijf terugkomen!
   - title: 02/02/2019 Frederic S.
-    description: Snelle service. Uitstekende ontvangst en vriendelijke kapster. Een
+    description:
+      Snelle service. Uitstekende ontvangst en vriendelijke kapster. Een
       aanrader en voorbeeld voor velen.
   - title: 24/10/2018 Mia S.
     description: Makkelijke manier om te reserveren en zoals steeds... helemaal
       volgens schema! Ook heel tof dat er avonduren zijn! Wordt heel erg
       geapprecieerd want dit vergt een echte inspanning !
   - title: 31/08/2018 Karen Vdh.
-    description: Was eerste keer hier en super tevreden ! Over ontvangst, haarkleur,
+    description:
+      Was eerste keer hier en super tevreden ! Over ontvangst, haarkleur,
       knipbeurt, wasbeurt, brushen, vriendelijkheid, volgende afspraak heb ik
       direct vastgelegd! Topmeid!
   - title: 18/04/2018 Nausika T
@@ -81,7 +86,8 @@ reviews:
   - title: 02/03/2018 Nadine DM
     description: Iemand met kennis ++++
   - title: 28/02/2018 Sigrid B.
-    description: Snelle en vlotte service, goede snit en stevige geblazen kortom een
+    description:
+      Snelle en vlotte service, goede snit en stevige geblazen kortom een
       nieuwe zeer tevreden klant!
   - title: 23/12/2017 Diane P.
     description: Tevreden over kapselsnit en kleur. Leuke en originele
@@ -96,7 +102,8 @@ reviews:
   - title: 07/09/2017 Jonathan P.
     description: Alles is goed! Top kapper!
   - title: 02/09/2017 Rita VD.
-    description: Afspraak kan niet beter zijn zoals het nu is, ik ben verwacht, stap
+    description:
+      Afspraak kan niet beter zijn zoals het nu is, ik ben verwacht, stap
       binnen en mag direct plaats nemen en na de tijd zoals voorzien ben ik
       terug buiten.
 ---

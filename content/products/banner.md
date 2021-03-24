@@ -1,5 +1,4 @@
 ---
-layout: products-banner
 title: O’right, natuurlijke shampoos en ecologische haarverzorging
 description: >-
   Een shampoo, zowat volledig samengesteld uit NATUURLIJKE INGREDIENTEN, verpakt

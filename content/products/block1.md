@@ -1,5 +1,4 @@
 ---
-layout: products-block1
 title: Waarom O'right?
 description: >-
   Elk product dat we gebruiken, heeft een invloed op ons lichaam en onze

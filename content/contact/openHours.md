@@ -1,5 +1,4 @@
 ---
-layout: contact-openHours
 monday: Gesloten
 tuesday: 13:00 - 22:00
 wednesday: 09:00 - 12:00

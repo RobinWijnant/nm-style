@@ -1,5 +1,4 @@
 ---
-layout: products-block2
 title: De groenste ter wereld
 description: |-
   Shampoo's :  100 ml = € 9,50  -  250 ml = € 19,40  -  400 ml = € 26.

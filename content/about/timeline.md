@@ -1,5 +1,4 @@
 ---
-layout: about-timeline
 timeline:
   - time: 3 juni 1987
     title: Geboortedatum
@@ -9,7 +8,8 @@ timeline:
     description: 7 jaar kappersopleiding.
   - time: 1 November 2007
     title: Opstart Hair & Beauty Benna in bijberoep
-    description: Van 0 opgestart met heel basic een bureaustoel, spiegel, lavabo en
+    description:
+      Van 0 opgestart met heel basic een bureaustoel, spiegel, lavabo en
       verplaatsbare wasbak.
   - time: Juni 2010
     title: Afgestudeerd na 4 jaar in avondschool voor Schoonheidsspecialiste.
