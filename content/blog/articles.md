@@ -48,4 +48,12 @@ articles:
 
       Groetjes Natalie
     thumbnail: ../assets/163839112_289286232657790_1214795773671990731_n.jpg
+  - date: 2021-04-14T15:53:56.598Z
+    thumbnail: ../assets/heropening.jpg
+    title: Heropening op maandag 26 april a.s.
+    description: |-
+      Stuur gerust een bericht om jouw plekje te reserveren.
+      Een dezer is het online systeem ook terug ter beschikking.
+      Groetjes Natalie
+    facebookUrl: https://www.facebook.com/Nm.Style.Welden/photos/a.246082732178557/3885494938237300/
 ---
